@@ -1,0 +1,10 @@
+age = input("How old are you? ")
+print(age)
+print(type(age))
+print("10" + "5")
+print(10 + 5)
+
+print(type("Pet"))
+print(type(23))
+print(type(2.3))
+print(type(False))
