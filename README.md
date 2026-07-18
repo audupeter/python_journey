@@ -102,10 +102,10 @@ Fix second.
 ## Reflection
 
 Today I felt like a real developer.
-
 I solved my first Git problem instead of giving up.
-
 That gave me confidence that I can learn much harder things in the future.
+
+Today, i also learned that debugging isn't about guessing. it's about collecting evidence, testing ideas, and fixing problems step by step. 
 
 ## Quote of the Day
 
@@ -114,5 +114,45 @@ That gave me confidence that I can learn much harder things in the future.
 ## Current Streak
 
 🔥 Day 2 / 365
+
+---
+
+# 📅 Day 3 – Data Types and Calculations 
+
+## What I Learned
+
+- Data types. `str`, `bool`, `int`, `float`
+- How to use `type()`.
+- Data types (string, integer, float, boolean).
+- The importance of experimenting.
+- When experimenting, write the code, predict the output, and run.
+
+## What I Built
+
+- Experiment1 program.
+- Future age calculator program.
+- Practiced creating variables with different data types and printing information.
+
+## Challenges
+
+- I was under the weather today feeling very sick, never thought i could show up today. But, one thought kept going on in my head. "I'll show up for day 3" and here i am. i'm proud of myself and thank God for my recovery.
+
+## Biggest Lesson
+
+Programming isn't about memorizing everything.
+It's about understanding concepts and practicing consistently.
+
+## Reflection
+
+Today was the third day of my journey.
+I realized i don't have to be motivated or in the best shape or health to show up everyday, i just i need to show up.
+
+## Quote of the Day
+
+"Good programmers don't guess, they experiment, observe and learn"
+
+## Current Streak
+
+🔥 Day 3 / 365
 
 ---
