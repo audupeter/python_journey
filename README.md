@@ -156,3 +156,40 @@ I realized i don't have to be motivated or in the best shape or health to show u
 🔥 Day 3 / 365
 
 ---
+
+# 📅 Day 3 – Decicion Making With If and Else Statement.
+
+## What I Learned
+
+- I learned how Python makes decisions using `if` and `else` statements.
+- I learned that indentations is what tells Python which lines belong to a condition. 
+- I learned the difference between using multiple `if` statements and using `if`/`elif`/`else` chain. 
+- Separate `if` statements are checked independently, while an `elif` chain stops after the first matching condition.
+
+## What I Built
+
+- if Experiment Program.
+- Eligibility Checker Program.
+
+## Challenges
+
+- At first, i thought that if an `if` condition was false, the rest of the program would stop running. Through practice, i learned that Python only skips the code inside the false `if` block and continues executing the remaining lines of the program.
+
+## Biggest Lesson
+
+Programming isn't about memorizing everything.
+It's about understanding concepts and practicing consistently.
+
+## Reflection
+
+I can now mentally trace Python executes a program line by line instead of relying on trial and error.
+
+## Quote of the Day
+
+"Computers don't think. They follow instructions. Great programmers write clear instructions."
+
+## Current Streak
+
+🔥 Day 4 / 365
+
+---

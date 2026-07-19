@@ -14,6 +14,6 @@ if age >= 18:
 else:
     print("Status: You are not eligible to vote yet.")
 if age >= 60:
-        print("Discount: Eligible for Senior discount.")
+        print("Discount: Eligible for Senior Discount.")
 else: 
-    print("Discount: Not eligible for discount.")
+    print("Discount: Not Eligible for Discount.")
