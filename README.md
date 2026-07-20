@@ -157,7 +157,7 @@ I realized i don't have to be motivated or in the best shape or health to show u
 
 ---
 
-# 📅 Day 3 – Decicion Making With If and Else Statement.
+# 📅 Day 4 – Decicion Making With If and Else Statement.
 
 ## What I Learned
 
@@ -191,5 +191,42 @@ I can now mentally trace Python executes a program line by line instead of relyi
 ## Current Streak
 
 🔥 Day 4 / 365
+
+---
+
+# 📅 Day 5 – Decicion Making With If and Else Statement.
+
+## What I Learned
+
+- I learned how to use `elif`to create programs with multiple decisions paths.
+- I learned more comparison operators such as >, <, ==, and !=. 
+- I understood the important difference between assignment(=) and comparision(==).
+- Separate `if` statements are checked independently, while an `elif` chain stops after the first matching condition.
+
+## What I Built
+
+- elif_experiment.py.
+- Gradde Checker Program.
+
+## Challenges
+
+- The biggest challenge today wasn't writting the code, it was thinking through how Python executes different decision structures. Predicting the output before running the program helped me understand the flow of execution much better.
+
+## Biggest Lesson
+
+Writting code is only a part of programming.
+Understaning why the code behaves the way it does is what builds real problem-solving skills.
+
+## Reflection
+
+Today i was able to explain the execution flow of different conditional statements without running the code. I also built a complete grade checker program and sucessfully solved the strech challenge by making a design decision for handling a perfect score.
+
+## Quote of the Day
+
+"Programming isn't about memorizing syntax. It's about learning how to think."
+
+## Current Streak
+
+🔥 Day 5 / 365
 
 ---
