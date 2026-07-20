@@ -5,7 +5,7 @@ print("="*40)
 name = input("Enter your name: ")
 age = int(input("How old are you?: "))
 score = int(input("Enter JAMB score: "))
-department = input("Enter Desired Department: ")
+department = input("Enter Desired Department: ").lower()
 
 print("Student Name: ", name)
 print("Age: ", age)
@@ -31,11 +31,11 @@ else:
     print("Below recommended admission age.")
     print()
 
-if department == "Medicine":
+if department == "medicine":
     print("Required Score: 300")
-elif department == "Engineering":
+elif department == "engineering":
     print("Required Score: 250")
-elif department == "Computer Science":
+elif department == "computer science":
     print("Required Score: 250")
 else: 
     print("General admission requirement rules apply.")
