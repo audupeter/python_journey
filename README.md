@@ -224,9 +224,45 @@ Today i was able to explain the execution flow of different conditional statemen
 ## Quote of the Day
 
 "Programming isn't about memorizing syntax. It's about learning how to think."
-
 ## Current Streak
 
 🔥 Day 5 / 365
+
+---
+
+# 📅 Day 6 – Loops (`while`) and Repetition
+
+## What I Learned
+
+- I learned how to use the `while` loop to repeat code while a condition is true.
+- I learned that loops are useful for programs that need to keep running until a specific condition is met.
+- I understood what an infinite loop is and why updating the loop variable is important.
+- I learned how to use `break` to immediately exit a loop when the required condition is met.
+- I learned that designing the flow of a program before writing code makes solving problems much easier.
+
+## What I Built
+
+- Countdown Program.
+- Password Checker Program.
+
+## Challenges
+
+- The Password Checker was my biggest challenge today. I spent a lot of time trying to stop the program from asking for another password after the correct one was entered. Instead of giving up, I debugged the program, improved my logic, and eventually solved it using `break`.
+
+## Biggest Lesson
+
+Debugging isn't a sign that I'm failing—it's part of programming. Every bug I solve teaches me something new and makes me a better programmer.
+
+## Reflection
+
+Today was the first day I truly understood why loops exist. Instead of writing code that runs once, I can now build programs that continue interacting with the user until they're finished. I also improved my problem-solving skills by fixing my Password Checker through debugging rather than starting over.
+
+## Quote of the Day
+
+"The best programmers aren't the ones who never get stuck. They're the ones who refuse to quit until they understand."
+
+## Current Streak
+
+🔥 Day 6 / 365
 
 ---
