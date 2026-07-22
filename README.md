@@ -266,3 +266,46 @@ Today was the first day I truly understood why loops exist. Instead of writing c
 🔥 Day 6 / 365
 
 ---
+
+# 📅 Day 7 – Functions (Part 1)
+
+## What I Learned
+
+- I learned how to create functions using the `def` keyword.
+- I learned that a function only runs when it is called.
+- I understood how functions help organize code into smaller, reusable pieces.
+- I learned that giving functions meaningful names makes code easier to read and understand.
+- I learned how the `break` statement can be used to immediately exit a loop when a condition is met.
+
+## What I Built
+
+- Greeting Machine.
+- Mini Calculator.
+- About Me (Functions Version).
+
+## Challenges
+
+- My biggest challenge wasn't today's lesson—it was improving yesterday's Password Checker project. I spent a long time debugging the program until I understood why it kept asking for another password after the correct one was entered. After learning about `break`, I was able to fix the logic myself.
+
+## Biggest Lesson
+
+Breaking a program into small functions makes it easier to read, understand, test, and improve. Good programmers don't try to write one giant block of code—they divide problems into smaller, manageable tasks.
+
+## Reflection
+
+Today I learned one of the most important programming concepts so far. Functions helped me see how large programs can be organized into smaller parts with specific responsibilities. I also realized that debugging is just as important as writing code. Fixing my Password Checker gave me more confidence because I solved the problem through persistence rather than giving up.
+
+## Quote of the Day
+
+"Small, well-organized pieces of code build great software."
+
+## Git Commit
+
+- Learned how to create and call functions.
+- Built three function-based projects.
+- Improved my understanding of organizing code into reusable blocks.
+- Successfully fixed the Password Checker by using `break` correctly.
+
+## Current Streak
+
+🔥 Day 7 / 365
