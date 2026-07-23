@@ -309,3 +309,51 @@ Today I learned one of the most important programming concepts so far. Functions
 ## Current Streak
 
 🔥 Day 7 / 365
+
+---
+
+# 📅 Day 8 – Functions (Part 2): Parameters
+
+## What I Learned
+
+- I learned that parameters allow functions to accept different values each time they are called.
+- I learned the difference between creating a function and calling a function with arguments.
+- I understood that one function can perform the same task using different inputs, making my code more flexible and reusable.
+- I learned that parameters help eliminate repetition and make programs easier to maintain.
+
+## What I Built
+
+- Personalized Greeting Program.
+- Math Toolkit.
+- About Me (Functions with Parameters).
+- Practice programs using parameters.
+
+## Challenges
+
+- The biggest challenge today wasn't writing the code—it was understanding how parameters change the behavior of a function. Once I realized that the same function could work with different values, everything started to make sense.
+
+## Biggest Lesson
+
+Functions become truly powerful when they can accept different information. Instead of creating multiple functions that do the same thing, I can write one reusable function and provide it with different values whenever I need it.
+
+## Reflection
+
+Today I took another big step toward writing cleaner and more professional Python code. I learned that functions are not just blocks of code, they can receive information and adapt to different situations. I also started thinking about how these ideas will improve my ATM Simulator when i decide to rebuild it in the future.
+
+## Quote of the Day
+
+"Write code once. Reuse it many times."
+
+## Git Commit
+
+- Learned how to create functions with parameters.
+- Built a Personalized Greeting program.
+- Built a Math Toolkit using reusable functions.
+- Created an About Me program using parameters.
+- Practiced passing different values into functions.
+
+## Current Streak
+
+🔥 Day 8 / 365
+
+---
