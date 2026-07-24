@@ -357,3 +357,49 @@ Today I took another big step toward writing cleaner and more professional Pytho
 🔥 Day 8 / 365
 
 ---
+
+# 📅 Day 9 – Functions (Part 3): Return Values
+
+## What I Learned
+
+- I learned how to use the `return` keyword to send a value back from a function.
+- I understood the difference between `print()` and `return`.
+- I learned that returned values can be stored in variables and used later in a program.
+- I realized that `return` makes functions more flexible and reusable than simply printing the result.
+
+## What I Built
+
+- Return Calculator.
+- Area Calculator.
+- Full Name Generator.
+- Practice programs using `return`.
+
+## Challenges
+
+- The biggest challenge today was understanding the difference between displaying a result with `print()` and sending a result back with `return`. Once I started storing returned values in variables, the difference became much clearer.
+
+## Biggest Lesson
+
+A function that returns a value is much more powerful than one that only prints a result. Returned values can be stored, modified, reused, and combined with other calculations to build larger programs.
+
+## Reflection
+
+Today I learned one of the most important concepts in Python so far. I discovered that functions don't just perform tasks—they can also give information back to the rest of the program. I can already see how `return` will improve future projects like my ATM Simulator by allowing functions to calculate and send back updated values instead of only displaying them.
+
+## Quote of the Day
+
+"Good functions don't just do work—they give useful results back."
+
+## Git Commit
+
+- Learned how to use the `return` keyword.
+- Built a Return Calculator using reusable functions.
+- Built an Area Calculator with returned values.
+- Created a Full Name Generator.
+- Practiced storing and using returned values.
+
+## Current Streak
+
+🔥 Day 9 / 365
+
+---
