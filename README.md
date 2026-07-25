@@ -403,3 +403,51 @@ Today I learned one of the most important concepts in Python so far. I discovere
 🔥 Day 9 / 365
 
 ---
+
+# 📅 Day 10 – Lists (Part 1)
+
+## What I Learned
+
+- I learned what a list is and how it allows me to store multiple values in a single variable.
+- I learned that each item in a list has an index, and indexing starts from `0`.
+- I learned how to access individual items using their index.
+- I learned how to use the `len()` function to find the number of items in a list.
+- I learned that lists can store different types of data, such as strings, numbers, and boolean values.
+
+## What I Built
+
+- Favourite Things Program.
+- Student Scores Program.
+- Personal Goals List.
+- Practice programs using lists and indexing.
+
+## Challenges
+
+- The biggest challenge today was remembering that Python starts counting list items from `0` instead of `1`. After practising with different examples, indexing became much easier to understand.
+
+## Biggest Lesson
+
+Lists make programs much more organised. Instead of creating many separate variables, I can group related information together and work with it more efficiently.
+
+## Reflection
+
+Today I learned one of Python's most important data structures. I now understand how lists can store collections of related information and why they are so useful in programming. While working on the ATM Simulator design, I realised that lists could be used to store transactions and generate a statement of account. That showed me how each new topic we learn can improve projects we've already built.
+
+## Quote of the Day
+
+"Great software isn't built all at once, it's improved one idea at a time."
+
+## Git Commit
+
+- Learned how to create and use lists.
+- Practised list indexing and the `len()` function.
+- Built the Favourite Things program.
+- Built the Student Scores program.
+- Created a Personal Goals list.
+- Designed how lists could improve the ATM Simulator by storing transaction history.
+
+## Current Streak
+
+🔥 Day 10 / 365
+
+---
