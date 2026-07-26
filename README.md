@@ -451,3 +451,50 @@ Today I learned one of Python's most important data structures. I now understand
 🔥 Day 10 / 365
 
 ---
+
+# 📅 Day 11 – Lists (Part 2): Modifying Lists
+
+## What I Learned
+
+- I learned how to add new items to a list using the `append()` method.
+- I learned how to remove items from a list using the `remove()` method.
+- I learned how to replace an existing item in a list by using its index.
+- I learned that lists are dynamic, meaning they can be updated without creating a new list.
+
+## What I Built
+
+- Shopping List Manager.
+- Football Squad Manager.
+- Skills List Challenge.
+- Practice programs for modifying lists.
+
+## Challenges
+
+- The biggest challenge today was remembering that replacing an item uses its index, while removing an item uses its actual value. After practicing both methods, I became much more comfortable with modifying lists.
+
+## Biggest Lesson
+
+Lists are not just for storing data—they can grow, shrink, and change as a program runs. This makes them incredibly useful for building real-world applications.
+
+## Reflection
+
+Today I learned how to modify lists by adding, removing, and replacing items. I also realised how useful lists will be when improving my ATM Simulator. Instead of simply displaying deposits and withdrawals, I can store every transaction in a list and later generate a statement of account for the user. It's exciting to see how each lesson continues to improve a project I built several days ago.
+
+## Quote of the Day
+
+"Every improvement to your code begins with a willingness to improve your thinking."
+
+## Git Commit
+
+- Learned how to modify lists using `append()` and `remove()`.
+- Practiced replacing items with list indexing.
+- Built a Shopping List Manager.
+- Built a Football Squad Manager.
+- Created a Skills List Challenge.
+- Designed how transaction history could be stored in the ATM Simulator.
+
+## Current Streak
+
+🔥 Day 11 / 365
+
+---
