@@ -498,3 +498,50 @@ Today I learned how to modify lists by adding, removing, and replacing items. I 
 🔥 Day 11 / 365
 
 ---
+
+# 📅 Day 12 – For Loops
+
+## What I Learned
+
+- I learned how to use a `for` loop to repeat an action for every item in a list.
+- I learned that a `for` loop automatically goes through each item one by one without me writing repetitive code.
+- I understood that the variable inside the loop is a temporary variable that holds one item from the list during each iteration.
+- I learned that `for` loops work perfectly with lists, making it easy to process large amounts of data.
+
+## What I Built
+
+- Greeting Everyone Program.
+- Favourite Foods Program.
+- Personal Goals Program.
+- Practice programs using `for` loops.
+
+## Challenges
+
+- The biggest challenge today was understanding how the loop variable changes automatically during each iteration. After tracing through a few examples, I realised Python assigns each item in the list to the loop variable one at a time.
+
+## Biggest Lesson
+
+A `for` loop allows me to write less code while accomplishing much more. Instead of repeating the same statement many times, I can let Python handle the repetition automatically.
+
+## Reflection
+
+Today was one of the most exciting lessons so far because I finally saw how lists and loops work together. I also realised how powerful this will be for my ATM Simulator. Since every deposit and withdrawal can be stored in a transactions list, a `for` loop can display a complete statement of account by printing every transaction automatically. It's exciting to see different Python concepts coming together to improve the same project.
+
+## Quote of the Day
+
+"Good programmers don't repeat themselves—they teach the computer how to repeat for them."
+
+## Git Commit
+
+- Learned how to use `for` loops.
+- Practiced looping through lists.
+- Built the Greeting Everyone program.
+- Built the Favourite Foods program.
+- Created a Personal Goals program.
+- Designed how `for` loops will display transaction history in the ATM Simulator.
+
+## Current Streak
+
+🔥 Day 12 / 365
+
+---
