@@ -545,3 +545,51 @@ Today was one of the most exciting lessons so far because I finally saw how list
 🔥 Day 12 / 365
 
 ---
+
+# 📅 Day 13 – `range()`
+
+## What I Learned
+
+- I learned that `range()` creates a sequence of numbers.
+- I learned that `range()` works together with `for` loops to repeat code a specific number of times.
+- I learned that `range(start, stop)` begins from the start value and stops before the stop value.
+- I learned that the third value in `range()` is the step, which controls how much the numbers increase or decrease during each iteration.
+- I learned that `range()` can also count backwards by using a negative step value.
+
+## What I Built
+
+- Counting Program.
+- Multiplication Table Program.
+- Countdown Program.
+- Practice programs using `range()`.
+
+## Challenges
+
+- The biggest challenge today was remembering that the stop value in `range()` is not included in the sequence. I also had to understand how the step value works when counting forwards and backwards.
+
+## Biggest Lesson
+
+`range()` allows me to repeat code a specific number of times without writing each number manually. Combined with `for` loops, it makes programs shorter, cleaner, and more efficient.
+
+## Reflection
+
+Today I learned how `range()` works and how useful it is for counting and repetition. I also realised it could improve my ATM Simulator by limiting PIN entry attempts and controlling repeated actions. During today's revision challenge, I identified a few concepts I had forgotten, which reminded me that regular review is just as important as learning new topics. To help with this, I created a Python Dictionary that will grow alongside my journey and make revision much easier.
+
+## Quote of the Day
+
+"Learning isn't about never forgetting. It's about remembering a little more every time you review."
+
+## Git Commit
+
+- Learned how to use `range()`.
+- Practiced counting with different start, stop, and step values.
+- Built a Counting Program.
+- Built a Multiplication Table Program.
+- Built a Countdown Program.
+- Started my personal Python Dictionary for quick revision.
+
+## Current Streak
+
+🔥 Day 13 / 365
+
+---
