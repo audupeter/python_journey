@@ -593,3 +593,54 @@ Today I learned how `range()` works and how useful it is for counting and repeti
 🔥 Day 13 / 365
 
 ---
+
+# 📅 Day 14 – Strings
+
+## What I Learned
+
+- I learned that a string is a sequence of characters enclosed in quotation marks.
+- I learned that every character in a string has an index, starting from **0**.
+- I learned that negative indexes allow me to access characters from the end of a string.
+- I learned how to use `len()` to count the number of characters in a string.
+- I learned how to format text using `.upper()`, `.lower()`, `.title()`, and `.strip()`.
+- I learned how to check whether a character or word exists inside a string using the `in` operator.
+
+## What I Built
+
+- Name Formatter Program.
+- Username Checker Program.
+- String Practice Program.
+- Initials Generator (Stretch Challenge).
+
+## Challenges
+
+- The biggest challenge today was understanding how positive and negative indexing work. I also had to remember that uppercase and lowercase letters are treated differently when checking if a character exists in a string.
+
+## Biggest Lesson
+
+Strings are one of the most important data types in Python because almost every program works with text. Learning how to clean, format, and inspect strings will help me build more user-friendly programs.
+
+## Reflection
+
+Today I learned how powerful strings are. Before now, I only used them to store text, but now I know how to access individual characters, count them, format them, and clean user input. I also realised that these string methods will make my future ATM Simulator much more professional by properly formatting user names and handling unwanted spaces in user input.
+
+## Quote of the Day
+
+"Small improvements in how you handle data create big improvements in the quality of your programs."
+
+## Git Commit
+
+- Learned about strings and string indexing.
+- Practiced positive and negative indexing.
+- Learned how to use `len()`.
+- Practiced `.upper()`, `.lower()`, `.title()`, and `.strip()`.
+- Built a Name Formatter Program.
+- Built a Username Checker Program.
+- Built an Initials Generator.
+- Updated my Python Dictionary with Day 14 concepts.
+
+## Current Streak
+
+🔥 Day 14 / 365
+
+---
