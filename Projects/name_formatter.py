@@ -1,0 +1,6 @@
+name = input("Enter your name: ")
+print("Original:", name)
+print("Uppercase:", name.upper())
+print("Lowercase:", name.lower())
+print("First letter cap:", name.title())
+print("Number of character:", len(name))
