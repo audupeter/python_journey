@@ -644,3 +644,56 @@ Today I learned how powerful strings are. Before now, I only used them to store 
 🔥 Day 14 / 365
 
 ---
+
+# 📅 Day 15 – Dictionaries
+
+## What I Learned
+
+- I learned that a dictionary stores data as **key-value pairs**.
+- I learned that a **key** is used to identify and access its corresponding value.
+- I learned how to access values in a dictionary using their keys.
+- I learned how to add new key-value pairs to a dictionary.
+- I learned how to update existing values in a dictionary.
+- I learned how to remove data from a dictionary using the `del` keyword.
+- I learned how to loop through a dictionary to access its keys and values.
+
+## What I Built
+
+- Student Profile Program.
+- Favourite Things Dictionary.
+- Book Dictionary (Stretch Challenge).
+- Dictionary Practice Program.
+
+## Challenges
+
+- The biggest challenge today was changing the way I think about storing data. Instead of using lists and indexes, I had to understand how dictionaries organize related information using keys and values.
+
+## Biggest Lesson
+
+Dictionaries make programs easier to read and manage because related information is stored together instead of being separated into multiple lists.
+
+## Reflection
+
+Today I learned one of Python's most useful data structures. I now understand that dictionaries allow me to organize related information in a much cleaner way than separate lists. While working on today's projects, I could already see how dictionaries could improve future versions of my Contact Book and other projects by keeping related data together.
+
+## Quote of the Day
+
+"Good programmers don't just write code—they choose the right way to organize their data."
+
+## Git Commit
+
+- Learned how dictionaries work.
+- Practiced creating dictionaries.
+- Learned how to access values using keys.
+- Added, updated, and deleted dictionary data.
+- Practiced looping through dictionaries.
+- Built a Student Profile Program.
+- Built a Favourite Things Dictionary.
+- Completed the Book Dictionary Stretch Challenge.
+- Updated my Python Dictionary with Day 15 concepts.
+
+## Current Streak
+
+🔥 Day 15 / 365
+
+---

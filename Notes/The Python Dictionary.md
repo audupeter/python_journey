@@ -401,8 +401,174 @@ True
 - ✅ Day 12 – `for` Loops
 - ✅ Day 13 – `range()`
 - ✅ Day 14 - Strings
+
+---
+
+---
+
+# 📅 Day 15 – Dictionaries
+
+## Dictionary
+A collection that stores data as **key-value pairs**.
+
+Example:
+
+```python
+student = {
+    "name": "Peter",
+    "age": 24
+}
+```
+
+---
+
+## Key
+A unique identifier used to access a value in a dictionary.
+
+Example:
+
+```python
+student["name"]
+```
+
+Here:
+
+```text
+"name"
+```
+
+is the key.
+
+---
+
+## Value
+The information stored for a particular key.
+
+Example:
+
+```python
+student = {
+    "name": "Peter"
+}
+```
+
+Here:
+
+```text
+Peter
+```
+
+is the value.
+
+---
+
+## Accessing a Value
+
+Use the key inside square brackets.
+
+Example:
+
+```python
+student = {
+    "name": "Peter"
+}
+
+print(student["name"])
+```
+
+Output:
+
+```text
+Peter
+```
+
+---
+
+## Adding Data
+
+Add a new key-value pair.
+
+Example:
+
+```python
+student["course"] = "Mathematics"
+```
+
+---
+
+## Updating Data
+
+Change the value of an existing key.
+
+Example:
+
+```python
+student["age"] = 25
+```
+
+---
+
+## Deleting Data
+
+Use the `del` keyword.
+
+Example:
+
+```python
+del student["age"]
+```
+
+---
+
+## Looping Through a Dictionary
+
+Loop through the keys.
+
+Example:
+
+```python
+for key in student:
+    print(key)
+```
+
+Loop through the values.
+
+Example:
+
+```python
+for key in student:
+    print(student[key])
+```
+
+---
+
+# 💡 Day 15 Key Takeaways
+
+- Dictionaries store data as key-value pairs.
+- Keys are used to access values.
+- Every key should be unique.
+- Dictionaries make related information easier to organize.
+- Values can be added, updated, or deleted.
+- Dictionaries can be looped through using a `for` loop.
+
+---
+
+## 🧠 Memory Sentences
+
+Dictionary → Stores data as key-value pairs.
+
+Key → A unique identifier used to access a value.
+
+Value → The information stored for a key.
+
+`dictionary[key]` → Accesses the value for a specific key.
+
+`del` → Removes a key-value pair from a dictionary.
+
+`for key in dictionary:` → Loops through every key in a dictionary.
+
 ---
 
 > **"Programming isn't about memorising syntax. It's about understanding ideas and solving problems one step at a time."**
 
-**Current Streak:** 🔥 Day 14 / 365
+**Current Streak:** 🔥 Day 15 / 365
