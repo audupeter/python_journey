@@ -11,6 +11,7 @@ print(student["school"])
 print(student["course"])
 print()
 
+del student["course"]
 for key in student:
     print(key)
 
