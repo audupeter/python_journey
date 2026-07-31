@@ -1,15 +1,29 @@
 print("="*45)
 print("                CONTACTS BOOK")
 print("="*45)
-
-name = input("Enter name: ").strip().title()
-phone_number = int(input("Enter Phone number: "))
-
-contacts = [name, phone_number]
-for contact in contacts:
-    print("Contact:", contact)
-
+names = []
+phone_numbers = []
+contacts = [names, phone_numbers]
+def menu():
+    print("1. Add Contact")
+    print("2. View Contacts")
+    print("3. Search Contact")
+    print("Delete Contact")
+    print("5. Exit")
+    choice = int(input("What do you want to?: "))
+    if choice == 1:
+         add_contact()
+    elif choice ==2:
+          view_contacts
+menu()
 def add_contact():
-    return contacts.append("Name:", name, "Phone Number:", phone_number)
+        name = input("Enter name: ").strip().title()
+        phone_number = int(input("Enter Phone number: "))
+        names.append(name)
+        phone_numbers.append(phone_number)
+        print("Contact Saved")
+        menu()
 
-print(contacts)
+def view_contacts():
+        for contact in contacts:
+            print(contact)
