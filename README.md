@@ -697,3 +697,56 @@ Today I learned one of Python's most useful data structures. I now understand th
 🔥 Day 15 / 365
 
 ---
+
+# 📅 Day 16 – Tuples
+
+## What I Learned
+
+- I learned that a tuple is a collection used to store multiple items.
+- I learned that tuples are **immutable**, meaning they cannot be changed after they are created.
+- I learned that tuples use parentheses `()` instead of square brackets `[]`.
+- I learned that tuple items can be accessed using positive and negative indexing.
+- I learned how to use `len()` to count the number of items in a tuple.
+- I learned how to loop through a tuple using a `for` loop.
+- I learned when to use a tuple instead of a list.
+
+## What I Built
+
+- Days of the Week Program.
+- Favourite Movies Program.
+- Tuple Practice Program.
+- Number Tuple (Stretch Challenge).
+
+## Challenges
+
+- The biggest challenge today wasn't writing the code—it was understanding when a tuple is a better choice than a list. Learning that tuples are immutable helped me understand why they are useful for storing data that should never change.
+
+## Biggest Lesson
+
+Choosing the right data structure is just as important as writing the code. Lists, dictionaries, and tuples all have different purposes, and understanding when to use each one will help me build better programs.
+
+## Reflection
+
+Today I added another important data structure to my Python toolbox. I learned that tuples are perfect for storing fixed information such as days of the week or ATM menu options. This lesson also made me think more about software design and choosing the right tool for each problem.
+
+## Quote of the Day
+
+"Great programmers don't just solve problems—they choose the right tools to solve them."
+
+## Git Commit
+
+- Learned about tuples.
+- Practiced tuple indexing.
+- Learned why tuples are immutable.
+- Used `len()` with tuples.
+- Looped through tuples using a `for` loop.
+- Built the Days of the Week program.
+- Built the Favourite Movies program.
+- Completed the Tuple Stretch Challenge.
+- Updated my Python Dictionary and Cheat Sheet.
+
+## Current Streak
+
+🔥 Day 16 / 365
+
+---

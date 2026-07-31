@@ -569,6 +569,134 @@ Value → The information stored for a key.
 
 ---
 
+---
+
+# 📅 Day 16 – Tuples
+
+## Tuple
+
+A collection used to store multiple items. Tuples are ordered and immutable.
+
+Example:
+
+```python
+fruits = ("Apple", "Banana", "Orange")
+```
+
+---
+
+## Immutable
+
+A value that cannot be changed after it has been created.
+
+Example:
+
+```python
+numbers = (1, 2, 3)
+```
+
+This is **not allowed**:
+
+```python
+numbers[0] = 10
+```
+
+---
+
+## Tuple Indexing
+
+Access items using their position.
+
+Example:
+
+```python
+fruits = ("Apple", "Banana", "Orange")
+
+print(fruits[0])
+```
+
+Output:
+
+```text
+Apple
+```
+
+---
+
+## Negative Indexing
+
+Access items from the end.
+
+Example:
+
+```python
+print(fruits[-1])
+```
+
+Output:
+
+```text
+Orange
+```
+
+---
+
+## `len()`
+
+Returns the number of items in a tuple.
+
+Example:
+
+```python
+numbers = (10, 20, 30)
+
+print(len(numbers))
+```
+
+Output:
+
+```text
+3
+```
+
+---
+
+## Looping Through a Tuple
+
+Example:
+
+```python
+for fruit in fruits:
+    print(fruit)
+```
+
+---
+
+# 💡 Day 16 Key Takeaways
+
+- Tuples use parentheses `()`.
+- Tuples are immutable.
+- Tuple indexing works the same as list indexing.
+- `len()` counts the number of items in a tuple.
+- `for` loops can iterate through tuples.
+- Tuples are useful for data that should not change.
+
+---
+
+## 🧠 Memory Sentences
+
+Tuple → An ordered, immutable collection.
+
+Immutable → Cannot be changed after creation.
+
+Tuple indexing → Works just like list indexing.
+
+`len()` → Counts the number of items.
+
+`for item in tuple:` → Loops through every item.
+
+---
+
 > **"Programming isn't about memorising syntax. It's about understanding ideas and solving problems one step at a time."**
 
-**Current Streak:** 🔥 Day 15 / 365
+**Current Streak:** 🔥 Day 16 / 365

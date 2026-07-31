@@ -403,3 +403,44 @@ range()
 - `for` loops iterate over collections.
 - `while` loops repeat while a condition is `True`.
 - Dictionaries store **key-value pairs**.
+
+---
+
+---
+
+# 📅 Day 16 – Tuples
+
+## Create Tuple
+
+```python
+fruits = ("Apple", "Banana", "Orange")
+```
+
+## Access Items
+
+```python
+fruits[0]
+fruits[-1]
+```
+
+## Count Items
+
+```python
+len(fruits)
+```
+
+## Loop Through Tuple
+
+```python
+for fruit in fruits:
+    print(fruit)
+```
+
+## Remember
+
+- Uses `()`
+- Ordered
+- Immutable
+- Supports indexing
+- Works with `len()`
+- Works with `for` loops
