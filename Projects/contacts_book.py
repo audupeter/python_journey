@@ -10,11 +10,7 @@ def menu():
     print("3. Search Contact")
     print("Delete Contact")
     print("5. Exit")
-    choice = int(input("What do you want to?: "))
-    if choice == 1:
-         add_contact()
-    elif choice ==2:
-          view_contacts
+    choice = int(input("What do you want to?: "))    
 menu()
 def add_contact():
         name = input("Enter name: ").strip().title()
