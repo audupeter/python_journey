@@ -696,7 +696,139 @@ Tuple indexing → Works just like list indexing.
 `for item in tuple:` → Loops through every item.
 
 ---
+---
+
+# 📅 Day 17 – Sets
+
+## Set
+
+A collection that stores unique items. Duplicate values are automatically removed.
+
+Example:
+
+```python
+fruits = {"Apple", "Banana", "Orange"}
+```
+
+---
+
+## Unique Items
+
+A set keeps only one copy of each value.
+
+Example:
+
+```python
+numbers = {1, 2, 2, 3, 3, 3}
+
+print(numbers)
+```
+
+Output:
+
+```text
+{1, 2, 3}
+```
+
+---
+
+## `.add()`
+
+Adds a new item to a set.
+
+Example:
+
+```python
+fruits.add("Mango")
+```
+
+---
+
+## `.remove()`
+
+Removes an item from a set.
+
+Example:
+
+```python
+fruits.remove("Banana")
+```
+
+---
+
+## `len()`
+
+Returns the number of unique items in a set.
+
+Example:
+
+```python
+len(fruits)
+```
+
+---
+
+## Loop Through a Set
+
+Example:
+
+```python
+for fruit in fruits:
+    print(fruit)
+```
+
+---
+
+## Set vs Dictionary
+
+### Set
+
+Stores only values.
+
+```python
+{"Apple", "Banana", "Orange"}
+```
+
+### Dictionary
+
+Stores key-value pairs.
+
+```python
+{
+    "name": "Peter",
+    "age": 24
+}
+```
+
+---
+
+# 💡 Day 17 Key Takeaways
+
+- Sets use curly braces `{}`.
+- Sets store only unique items.
+- Duplicate values are ignored.
+- Use `.add()` to add items.
+- Use `.remove()` to remove items.
+- `len()` counts unique items.
+- `for` loops work with sets.
+- Sets do not store key-value pairs.
+
+---
+
+## 🧠 Memory Sentences
+
+Set → A collection of unique values.
+
+Duplicate → A repeated value.
+
+`.add()` → Adds an item.
+
+`.remove()` → Removes an item.
+
+Sets automatically ignore duplicates.
+
+---
 
 > **"Programming isn't about memorising syntax. It's about understanding ideas and solving problems one step at a time."**
 
-**Current Streak:** 🔥 Day 16 / 365
+**Current Streak:** 🔥 Day 17 / 365

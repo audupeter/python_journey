@@ -444,3 +444,47 @@ for fruit in fruits:
 - Supports indexing
 - Works with `len()`
 - Works with `for` loops
+
+---
+
+# 📅 Day 17 – Sets
+
+## Create a Set
+
+```python
+fruits = {"Apple", "Banana", "Orange"}
+```
+
+## Add Item
+
+```python
+fruits.add("Mango")
+```
+
+## Remove Item
+
+```python
+fruits.remove("Banana")
+```
+
+## Count Items
+
+```python
+len(fruits)
+```
+
+## Loop Through a Set
+
+```python
+for fruit in fruits:
+    print(fruit)
+```
+
+## Remember
+
+- Uses `{}`
+- Stores unique items only
+- Automatically removes duplicates
+- Supports `len()`
+- Supports `for` loops
+- Does **not** use key-value pairs
