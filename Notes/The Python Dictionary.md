@@ -938,6 +938,140 @@ Module → A reusable Python file.
 
 ---
 
+# 📅 Day 19 – File Handling
+
+## File Handling
+
+The process of creating, reading, writing, and updating files using Python.
+
+Example:
+
+```python
+file = open("notes.txt", "w")
+```
+
+---
+
+## `open()`
+
+Opens a file.
+
+Example:
+
+```python
+file = open("notes.txt", "r")
+```
+
+---
+
+## Write Mode (`"w"`)
+
+Creates a new file if it doesn't exist.
+
+If the file already exists, its contents are replaced.
+
+Example:
+
+```python
+file = open("notes.txt", "w")
+file.write("Hello")
+```
+
+---
+
+## Read Mode (`"r"`)
+
+Reads the contents of a file.
+
+Example:
+
+```python
+file = open("notes.txt", "r")
+print(file.read())
+```
+
+---
+
+## Append Mode (`"a"`)
+
+Adds new content to the end of an existing file without deleting the previous content.
+
+Example:
+
+```python
+file = open("notes.txt", "a")
+file.write("\nWelcome back!")
+```
+
+---
+
+## `.write()`
+
+Writes data into a file.
+
+Example:
+
+```python
+file.write("Python is awesome!")
+```
+
+---
+
+## `.read()`
+
+Reads everything inside a file.
+
+Example:
+
+```python
+print(file.read())
+```
+
+---
+
+## `.close()`
+
+Closes a file after you finish using it.
+
+Example:
+
+```python
+file.close()
+```
+
+---
+
+# 💡 Day 19 Key Takeaways
+
+- File handling lets programs save information permanently.
+- `open()` opens a file.
+- `"w"` writes and replaces existing content.
+- `"r"` reads a file.
+- `"a"` adds new content without deleting existing content.
+- Always close files after using them.
+
+---
+
+## 🧠 Memory Sentences
+
+File Handling → Saving and reading information from files.
+
+`open()` → Opens a file.
+
+`"w"` → Write (creates or replaces).
+
+`"r"` → Read.
+
+`"a"` → Append (adds to the end).
+
+`.write()` → Writes data.
+
+`.read()` → Reads data.
+
+`.close()` → Closes the file.
+
+---
+
 > **"Programming isn't about memorising syntax. It's about understanding ideas and solving problems one step at a time."**
 
-**Current Streak:** 🔥 Day 18 / 365
+**Current Streak:** 🔥 Day 19 / 365

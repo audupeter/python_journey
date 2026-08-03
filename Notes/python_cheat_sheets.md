@@ -543,3 +543,47 @@ random.randint(1, 10)
 - `import module` imports everything.
 - `from module import function` imports only what you need.
 - Modules make projects cleaner and easier to maintain.
+
+---
+
+# 📅 Day 19 – File Handling
+
+## Open a File
+
+```python
+file = open("notes.txt", "r")
+```
+
+## Write to a File
+
+```python
+file = open("notes.txt", "w")
+file.write("Hello")
+file.close()
+```
+
+## Read a File
+
+```python
+file = open("notes.txt", "r")
+print(file.read())
+file.close()
+```
+
+## Append to a File
+
+```python
+file = open("notes.txt", "a")
+file.write("\nWelcome back!")
+file.close()
+```
+
+## Remember
+
+- `open()` opens a file.
+- `"w"` writes (creates or replaces).
+- `"r"` reads.
+- `"a"` appends.
+- `.write()` writes data.
+- `.read()` reads data.
+- `.close()` closes the file.

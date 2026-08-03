@@ -750,3 +750,157 @@ Today I added another important data structure to my Python toolbox. I learned t
 🔥 Day 16 / 365
 
 ---
+
+# 📅 Day 17 – Sets
+
+## What I Learned
+
+- I learned that a set is a collection that stores only unique items.
+- I learned that sets automatically remove duplicate values.
+- I learned that sets use curly braces `{}`, but unlike dictionaries, they do not store key-value pairs.
+- I learned how to add items to a set using `.add()`.
+- I learned how to remove items from a set using `.remove()`.
+- I learned how to loop through a set using a `for` loop.
+- I learned that sets are useful when duplicate values should not exist.
+
+## What I Built
+
+- Favourite Fruits Program.
+- Classroom Attendance Program.
+- Sets Practice Program.
+- Colours (Stretch Challenge).
+
+## Challenges
+
+- The biggest challenge today was understanding the difference between a set and a dictionary since both use curly braces. I learned that dictionaries store key-value pairs while sets only store unique values.
+
+## Biggest Lesson
+
+Every Python collection has a specific purpose. Sets are the best choice whenever I need to ensure that duplicate values are not allowed.
+
+## Reflection
+
+Today I completed learning the four main Python collection types: lists, dictionaries, tuples, and sets. I also realised that programming is not just about writing code—it is about choosing the right data structure for the problem I am solving.
+
+## Quote of the Day
+
+"The right data structure can make a simple program become a great one."
+
+## Git Commit
+
+- Learned about Python sets.
+- Practiced adding and removing set items.
+- Learned that sets automatically remove duplicates.
+- Used `len()` with sets.
+- Looped through sets using a `for` loop.
+- Built the Favourite Fruits program.
+- Built the Classroom Attendance program.
+- Completed the Stretch Challenge.
+- Updated my Python Dictionary and Cheat Sheet.
+
+## Current Streak
+
+🔥 Day 17 / 365
+
+---
+
+# 📅 Day 18 – Modules
+
+## What I Learned
+
+- I learned that a module is a Python file containing reusable code.
+- I learned how to create my own modules by writing functions in separate files.
+- I learned how to import an entire module using `import module_name`.
+- I learned how to import specific functions using `from module_name import function_name`.
+- I learned about Python's built-in modules such as `math` and `random`.
+- I learned that modules help organize large programs into smaller, manageable files.
+
+## What I Built
+
+- Calculator Module.
+- Greetings Module.
+- Main program for testing calculator functions.
+- Main program for testing the greetings module.
+- Random Number Generator (Stretch Challenge).
+
+## Challenges
+
+- The biggest challenge today was understanding how different Python files communicate with each other using imports. After practicing with my own modules, it became much clearer.
+
+## Biggest Lesson
+
+Professional programs are rarely written in a single file. Modules make code reusable, organized, and easier to maintain.
+
+## Reflection
+
+Today I learned one of the most practical concepts in Python so far. Instead of rewriting functions in every program, I can now create them once and reuse them whenever I need them. I also started thinking about how I can organize larger projects like my ATM Simulator into multiple modules.
+
+## Quote of the Day
+
+"Good programmers don't just write code—they organize it."
+
+## Git Commit
+
+- Learned about Python modules.
+- Created my own reusable modules.
+- Imported entire modules and specific functions.
+- Used the built-in `math` module.
+- Used the built-in `random` module.
+- Built the Calculator Module.
+- Built the Greetings Module.
+- Updated my Python Dictionary and Cheat Sheet.
+
+## Current Streak
+
+🔥 Day 18 / 365
+
+--- 
+
+# 📅 Day 19 – File Handling
+
+## What I Learned
+
+- I learned that file handling allows Python programs to save and retrieve data from files.
+- I learned how to open files using the `open()` function.
+- I learned the difference between write (`"w"`), read (`"r"`), and append (`"a"`) modes.
+- I learned how to write data to a file using `.write()`.
+- I learned how to read data from a file using `.read()`.
+- I learned why it is important to close files using `.close()`.
+- I learned that file handling allows programs to remember information even after they are closed.
+
+## What I Built
+
+- Notes File Project.
+- Journal File Project.
+- File Handling Practice Program.
+- File Append (Stretch Challenge).
+
+## Challenges
+
+- The biggest challenge today was understanding the difference between write mode and append mode. After practicing both, I understood that `"w"` replaces the file contents while `"a"` adds new content to the end of the file.
+
+## Biggest Lesson
+
+File handling gives programs memory. Without it, all information is lost when a program closes.
+
+## Reflection
+
+Today was one of the most exciting lessons because I learned how to save information permanently. I immediately saw how useful this will be for my ATM Simulator and Contact Book, where balances, contacts, and transaction history should still exist after the program is closed.
+
+## Quote of the Day
+
+"Programs become useful when they can remember."
+
+## Git Commit
+
+- Learned Python file handling.
+- Learned write, read, and append modes.
+- Created and read text files.
+- Appended data to existing files.
+- Built the Notes project.
+- Built the Journal project.
+- Updated my Python Dictionary and Cheat Sheet.
+
+## Current Streak
+
+🔥 Day 19 / 365
