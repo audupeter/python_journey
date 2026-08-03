@@ -829,6 +829,115 @@ Sets automatically ignore duplicates.
 
 ---
 
+---
+
+# 📅 Day 18 – Modules
+
+## Module
+
+A Python file that contains reusable code such as functions, variables, or classes.
+
+Example:
+
+```python
+# calculator.py
+
+def add(a, b):
+    return a + b
+```
+
+---
+
+## Import a Module
+
+Imports everything from a module.
+
+Example:
+
+```python
+import calculator
+
+print(calculator.add(5, 3))
+```
+
+---
+
+## Import a Specific Function
+
+Imports only the function you need.
+
+Example:
+
+```python
+from calculator import add
+
+print(add(5, 3))
+```
+
+---
+
+## Built-in Modules
+
+Python comes with many built-in modules.
+
+### `math`
+
+Provides mathematical functions.
+
+Example:
+
+```python
+import math
+
+print(math.sqrt(25))
+```
+
+Output:
+
+```text
+5.0
+```
+
+---
+
+### `random`
+
+Generates random values.
+
+Example:
+
+```python
+import random
+
+print(random.randint(1, 10))
+```
+
+---
+
+# 💡 Day 18 Key Takeaways
+
+- A module is a reusable Python file.
+- Modules help organize large programs.
+- `import module` imports the entire module.
+- `from module import function` imports only the specified function.
+- Python includes many useful built-in modules.
+
+---
+
+## 🧠 Memory Sentences
+
+Module → A reusable Python file.
+
+`import module` → Import the whole module.
+
+`from module import function` → Import only one function.
+
+`math` → Mathematical operations.
+
+`random` → Generates random values.
+
+---
+
 > **"Programming isn't about memorising syntax. It's about understanding ideas and solving problems one step at a time."**
 
-**Current Streak:** 🔥 Day 17 / 365
+**Current Streak:** 🔥 Day 18 / 365

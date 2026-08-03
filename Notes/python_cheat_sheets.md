@@ -488,3 +488,58 @@ for fruit in fruits:
 - Supports `len()`
 - Supports `for` loops
 - Does **not** use key-value pairs
+
+---
+
+---
+
+# 📅 Day 18 – Modules
+
+## Create a Module
+
+```python
+# calculator.py
+
+def add(a, b):
+    return a + b
+```
+
+## Import Entire Module
+
+```python
+import calculator
+
+print(calculator.add(5, 3))
+```
+
+## Import Specific Function
+
+```python
+from calculator import add
+
+print(add(5, 3))
+```
+
+## Built-in `math` Module
+
+```python
+import math
+
+math.sqrt(25)
+```
+
+## Built-in `random` Module
+
+```python
+import random
+
+random.randint(1, 10)
+```
+
+## Remember
+
+- A module is a reusable Python file.
+- Avoid rewriting the same code.
+- `import module` imports everything.
+- `from module import function` imports only what you need.
+- Modules make projects cleaner and easier to maintain.
