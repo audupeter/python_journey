@@ -587,3 +587,75 @@ file.close()
 - `.write()` writes data.
 - `.read()` reads data.
 - `.close()` closes the file.
+
+---
+
+# 📅 Day 20 – Exception Handling
+
+## Basic Exception Handling
+
+```python
+try:
+    number = int(input("Enter a number: "))
+except ValueError:
+    print("Invalid number.")
+```
+
+---
+
+## Handle Division by Zero
+
+```python
+try:
+    result = 100 / number
+except ZeroDivisionError:
+    print("You cannot divide by zero.")
+```
+
+---
+
+## Using `else`
+
+```python
+try:
+    number = int(input("Enter a number: "))
+except ValueError:
+    print("Invalid input.")
+else:
+    print("Success!")
+```
+
+---
+
+## Using `finally`
+
+```python
+try:
+    print("Trying...")
+finally:
+    print("Finished.")
+```
+
+---
+
+## Multiple Exceptions
+
+```python
+try:
+    number = int(input("Enter a number: "))
+    result = 100 / number
+except ValueError:
+    print("Numbers only!")
+except ZeroDivisionError:
+    print("Zero is not allowed!")
+```
+
+---
+
+## Remember
+
+- `try` → Code that may fail.
+- `except` → Handles errors.
+- `else` → Runs only if no error occurs.
+- `finally` → Always runs.
+- Exception handling keeps programs from crashing.

@@ -1072,6 +1072,125 @@ File Handling → Saving and reading information from files.
 
 ---
 
+# 📅 Day 20 – Exception Handling
+
+## Exception
+
+An error that occurs while a program is running.
+
+Examples:
+
+- `ValueError`
+- `ZeroDivisionError`
+- `FileNotFoundError`
+
+---
+
+## `try`
+
+Contains code that might cause an exception.
+
+Example:
+
+```python
+try:
+    number = int(input("Enter a number: "))
+```
+
+---
+
+## `except`
+
+Handles an exception and prevents the program from crashing.
+
+Example:
+
+```python
+except ValueError:
+    print("Invalid number.")
+```
+
+---
+
+## `ValueError`
+
+Occurs when a value has the correct type but an invalid value.
+
+Example:
+
+```python
+int("hello")
+```
+
+---
+
+## `ZeroDivisionError`
+
+Occurs when dividing a number by zero.
+
+Example:
+
+```python
+10 / 0
+```
+
+---
+
+## `else`
+
+Runs only if no exception occurs.
+
+Example:
+
+```python
+else:
+    print("Success!")
+```
+
+---
+
+## `finally`
+
+Runs whether an exception occurs or not.
+
+Example:
+
+```python
+finally:
+    print("Program finished.")
+```
+
+---
+
+# 💡 Day 20 Key Takeaways
+
+- Exceptions are runtime errors.
+- `try` contains risky code.
+- `except` handles errors.
+- `else` runs only when there are no errors.
+- `finally` always runs.
+- Exception handling makes programs more reliable and user-friendly.
+
+---
+
+## 🧠 Memory Sentences
+
+Exception → An error during program execution.
+
+`try` → Test risky code.
+
+`except` → Handle the error.
+
+`ValueError` → Invalid value.
+
+`ZeroDivisionError` → Division by zero.
+
+`else` → Runs if no error occurs.
+
+`finally` → Always runs.
+
+---
+
 > **"Programming isn't about memorising syntax. It's about understanding ideas and solving problems one step at a time."**
 
-**Current Streak:** 🔥 Day 19 / 365
+**Current Streak:** 🔥 Day 20 / 365

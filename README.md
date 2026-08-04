@@ -904,3 +904,52 @@ Today was one of the most exciting lessons because I learned how to save informa
 ## Current Streak
 
 🔥 Day 19 / 365
+
+---
+
+# 📅 Day 20 – Exception Handling
+
+## What I Learned
+
+- I learned that exceptions are errors that occur while a program is running.
+- I learned how to use `try` and `except` to prevent programs from crashing.
+- I learned how to handle different types of exceptions, such as `ValueError` and `ZeroDivisionError`.
+- I learned how to use `else` to run code only when no exception occurs.
+- I learned how to use `finally` to execute code regardless of whether an exception occurs.
+- I learned that exception handling improves the user experience by providing helpful error messages instead of crashing the program.
+
+## What I Built
+
+- Number Validation Program.
+- Safe Division Calculator.
+- Exception Handling Practice Program.
+- Combined `try`, `except`, `else`, and `finally` Challenge.
+
+## Challenges
+
+- The biggest challenge today was understanding when to use `else` and `finally`. After practicing, I understood that `else` runs only when there are no errors, while `finally` always runs.
+
+## Biggest Lesson
+
+Programs should expect users to make mistakes. Exception handling allows programs to recover gracefully instead of crashing.
+
+## Reflection
+
+Today I learned how professional programs deal with unexpected situations. Instead of allowing my programs to crash, I can now handle errors and display helpful messages. This will be very useful when improving my ATM Simulator and future applications.
+
+## Quote of the Day
+
+"Great programs don't avoid errors—they handle them."
+
+## Git Commit
+
+- Learned exception handling.
+- Practiced `try`, `except`, `else`, and `finally`.
+- Handled `ValueError` and `ZeroDivisionError`.
+- Built the Number Validation project.
+- Built the Safe Division Calculator.
+- Updated my Python Dictionary and Cheat Sheet.
+
+## Current Streak
+
+🔥 Day 20 / 365
