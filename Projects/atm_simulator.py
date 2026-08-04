@@ -1,4 +1,4 @@
-name = input("What is your name? :")
+name = input("What is your name? :").title()
 balance = 5000
 
 
