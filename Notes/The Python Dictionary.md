@@ -1193,4 +1193,155 @@ Exception → An error during program execution.
 
 > **"Programming isn't about memorising syntax. It's about understanding ideas and solving problems one step at a time."**
 
-**Current Streak:** 🔥 Day 20 / 365
+---
+# Python Dictionary — Day 21
+
+## Parameter
+
+A **parameter** is a placeholder used when defining a function.
+
+```python
+def greet(name):
+    print("Hello", name)
+```
+
+Here, `name` is the parameter.
+
+---
+
+## Argument
+
+An **argument** is the actual value passed to a function.
+
+```python
+greet("Peter")
+```
+
+Here, `"Peter"` is the argument.
+
+### Easy way to remember
+
+**Parameter = placeholder**
+
+**Argument = actual value**
+
+---
+
+## Return
+
+`return` sends a value back from a function.
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+```
+
+The returned value can then be stored in a variable.
+
+---
+
+## Default Parameter
+
+A parameter can have a default value.
+
+```python
+def greet(name="Peter"):
+    print("Hello", name)
+
+greet()
+```
+
+Python uses `"Peter"` because no argument was supplied.
+
+If an argument is supplied:
+
+```python
+greet("John")
+```
+
+`"John"` is used instead of the default `"Peter"`.
+
+---
+
+## Scope
+
+**Scope** refers to where a variable can be accessed.
+
+### Local Scope
+
+A variable created inside a function is local to that function.
+
+```python
+def greet():
+    message = "Hello"
+    print(message)
+```
+
+### Global Scope
+
+A variable created outside a function is global.
+
+```python
+name = "Peter"
+
+def greet():
+    print(name)
+```
+
+---
+
+## Function
+
+A **function** is a reusable block of code that performs a task.
+
+```python
+def multiply(a, b):
+    return a * b
+```
+
+Functions can receive information, process it, and return a result.
+
+### Function Flow
+
+```text
+Arguments
+    ↓
+Parameters
+    ↓
+Processing
+    ↓
+Return Value
+```
+
+---
+
+## ATM Example
+
+```python
+def deposit(balance, amount):
+    return balance + amount
+```
+
+`balance` and `amount` are parameters.
+
+Example call:
+
+```python
+deposit(50000, 5000)
+```
+
+`50000` and `5000` are arguments.
+
+The function returns the updated balance.
+
+---
+
+## Key Lesson
+
+Good functions should receive the information they need as parameters and return the result when appropriate.
+
+**Input → Process → Output**
+
+**Current Streak:** 🔥 Day 21 / 365
