@@ -1,6 +1,6 @@
 favourite_things = {
-    "favourite food": "chicken curry",
-    "favourite sport": "football",
+    "favourite food": "Chicken curry",
+    "favourite sport": "Football",
     "favourite language": "English",
     "dream career": "AI Engineer"
 }
