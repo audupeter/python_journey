@@ -19,3 +19,6 @@ def withdrawal(balance, amount):
         return (balance - amount)
 total = withdrawal(balance, 60000)
 print("New Balance:", total)
+
+deposit(balance, 10000)
+print(deposit(balance, 10000))
