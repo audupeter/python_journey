@@ -1344,4 +1344,268 @@ Good functions should receive the information they need as parameters and return
 
 **Input → Process → Output**
 
-**Current Streak:** 🔥 Day 21 / 365
+---
+
+# Day 22 — Functions: Deeper Practice
+
+## Function Input → Processing → Output
+
+A function can receive information, process it, and return a result.
+
+```python
+def calculate_total(price, quantity):
+    return price * quantity
+```
+
+---
+
+## Parameter
+
+A **parameter** is a variable/place-holder defined in a function.
+
+```python
+def greet(name):
+    print("Hello", name)
+```
+
+`name` is the parameter.
+
+---
+
+## Argument
+
+An **argument** is the actual value passed to a function when it is called.
+
+```python
+greet("Peter")
+```
+
+`"Peter"` is the argument.
+
+---
+
+## Return Value
+
+A **return value** is the value a function sends back to the part of the program that called it.
+
+```python
+def add(a, b):
+    return a + b
+```
+
+If:
+
+```python
+result = add(10, 20)
+```
+
+the function returns `30`.
+
+Therefore:
+
+```python
+result
+```
+
+contains:
+
+```text
+30
+```
+
+---
+
+## Function Call
+
+A **function call** is when we execute a function.
+
+```python
+add(10, 20)
+```
+
+The function receives the arguments and runs its code.
+
+---
+
+## `return` Ends Function Execution
+
+When Python reaches `return`, the function immediately ends.
+
+```python
+def example():
+    return 10
+    print("Hello")
+```
+
+The `print()` will not execute.
+
+---
+
+## Function Without a Return Value
+
+If a function finishes without returning a value, the result is:
+
+```python
+None
+```
+
+Example:
+
+```python
+def example():
+    print("Hello")
+
+result = example()
+```
+
+`result` contains `None`.
+
+---
+
+## Function and Original Variables
+
+Passing a variable into a function does not mean the original variable automatically becomes the function's returned value.
+
+Example:
+
+```python
+balance = 50000
+total = withdrawal(balance, 10000)
+```
+
+If the function returns `40000`:
+
+```text
+balance = 50000
+total = 40000
+```
+
+---
+
+## Updating State With a Returned Value
+
+If we want the returned value to replace the old value:
+
+```python
+balance = deposit(balance, 10000)
+```
+
+The returned balance becomes the new value of `balance`.
+
+---
+
+## ATM Function Design
+
+### Check Balance
+
+```python
+def check_balance(balance):
+    return balance
+```
+
+Receives the current balance and returns it.
+
+### Deposit
+
+```python
+def deposit(balance, amount):
+    return balance + amount
+```
+
+Receives the current balance and deposit amount, then returns the new balance.
+
+### Withdrawal
+
+A withdrawal function should:
+
+1. Receive the balance and withdrawal amount.
+2. Check whether the amount is greater than the balance.
+3. Reject the withdrawal if there are insufficient funds.
+4. Otherwise return the new balance.
+
+---
+
+## Important Day 22 Concept
+
+The difference between these:
+
+```python
+deposit(balance, 10000)
+```
+
+and:
+
+```python
+balance = deposit(balance, 10000)
+```
+
+The first calls the function.
+
+The second calls the function **and stores its returned value back into `balance`**.
+
+---
+
+## Common Mistakes Corrected
+
+### Mistake 1 — Ignoring a parameter
+
+Incorrect:
+
+```python
+def deposit(balance, amount):
+    return balance + 10000
+```
+
+The function receives `amount` but doesn't use it.
+
+Better:
+
+```python
+def deposit(balance, amount):
+    return balance + amount
+```
+
+### Mistake 2 — Returning after insufficient funds
+
+A withdrawal should not subtract money when:
+
+```python
+amount > balance
+```
+
+### Mistake 3 — Code after `return`
+
+```python
+return balance - amount
+print("Withdrawal successful!")
+```
+
+The `print()` will never run because `return` ends the function.
+
+### Mistake 4 — Confusing `balance` and the returned value
+
+For:
+
+```python
+balance = 50000
+total = withdrawal(balance, 10000)
+```
+
+the expected values are:
+
+```text
+balance = 50000
+total = 40000
+```
+
+---
+
+## Day 22 Key Lesson
+
+> **A function receives arguments, processes them, returns a value, and the calling code can store or use that returned value.**
+
+This is the foundation for combining multiple functions into larger programs.
+
+---
+
+**Current Streak:** 🔥 Day 22 / 365

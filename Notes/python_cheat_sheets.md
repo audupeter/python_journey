@@ -659,3 +659,369 @@ except ZeroDivisionError:
 - `else` → Runs only if no error occurs.
 - `finally` → Always runs.
 - Exception handling keeps programs from crashing.
+
+---
+# Python Cheat Sheet — Day 21
+
+## Functions: Parameters & Arguments
+
+### Parameter
+
+A parameter is a placeholder in a function definition.
+
+```python
+def greet(name):
+    print("Hello", name)
+```
+
+### Argument
+
+An argument is the actual value passed into a function.
+
+```python
+greet("Peter")
+```
+
+`name` = parameter
+`"Peter"` = argument
+
+---
+
+## Multiple Parameters
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+print(result)
+```
+
+---
+
+## Return
+
+`return` sends a value back from a function.
+
+```python
+def multiply(a, b):
+    return a * b
+
+answer = multiply(5, 4)
+print(answer)
+```
+
+Output:
+
+```text
+20
+```
+
+---
+
+## Default Parameters
+
+A default parameter is used when no argument is provided.
+
+```python
+def greet(name="Peter"):
+    print("Hello", name)
+
+greet()
+```
+
+Output:
+
+```text
+Hello Peter
+```
+
+Providing another argument replaces the default:
+
+```python
+greet("John")
+```
+
+---
+
+## Variable Scope
+
+### Local Variable
+
+Created inside a function.
+
+```python
+def greet():
+    message = "Hello"
+    print(message)
+```
+
+`message` is local to the function.
+
+### Global Variable
+
+Created outside a function.
+
+```python
+name = "Peter"
+
+def greet():
+    print(name)
+```
+
+---
+
+## Function Design Pattern
+
+Think:
+
+```text
+Input → Processing → Return
+```
+
+Example:
+
+```python
+def deposit(balance, amount):
+    return balance + amount
+```
+
+---
+
+## Calculator Function Pattern
+
+```python
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    return a / b
+```
+
+---
+
+## Stretch Challenge
+
+```python
+def calculate_total_cost(price, quantity):
+    return price * quantity
+
+total_cost = calculate_total_cost(500, 4)
+print(total_cost)
+```
+
+Output:
+
+```text
+2000
+```
+---
+# Day 22 — Functions: Deeper Practice
+
+## Function Flow
+
+```text
+Arguments
+    ↓
+Function
+    ↓
+Processing
+    ↓
+Return value
+    ↓
+Variable stores returned value
+```
+
+---
+
+## Parameters
+
+Parameters are placeholders defined in a function.
+
+```python
+def add(a, b):
+    return a + b
+```
+
+`a` and `b` are parameters.
+
+---
+
+## Arguments
+
+Arguments are the actual values passed to a function.
+
+```python
+add(10, 20)
+```
+
+`10` and `20` are arguments.
+
+---
+
+## Return
+
+`return` sends a value back from a function.
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+```
+
+Result:
+
+```python
+result = 30
+```
+
+### Important
+
+The variable stores the **returned value**, not the function itself.
+
+---
+
+## Return Ends the Function
+
+```python
+def example():
+    return 10
+    print("This will not run")
+```
+
+Anything after `return` in the same execution path will not run.
+
+---
+
+## Multiple Parameters
+
+```python
+def calculate_total(price, quantity):
+    return price * quantity
+```
+
+Call:
+
+```python
+total = calculate_total(500, 3)
+```
+
+Result:
+
+```python
+total = 1500
+```
+
+---
+
+## Functions and Variables
+
+```python
+balance = 50000
+total = withdrawal(balance, 10000)
+```
+
+If the function returns `40000`:
+
+```text
+balance → 50000
+total   → 40000
+```
+
+The original variable does not automatically change.
+
+---
+
+## Updating a Variable With a Return Value
+
+To replace the old value with the returned value:
+
+```python
+balance = deposit(balance, 10000)
+```
+
+The returned value becomes the new value of `balance`.
+
+---
+
+## Conditional Function Logic
+
+```python
+def withdrawal(balance, amount):
+    if amount > balance:
+        print("Insufficient funds")
+    else:
+        print("Withdrawal successful!")
+        return balance - amount
+```
+
+---
+
+## `None`
+
+If a function reaches the end without returning a value:
+
+```python
+def example():
+    print("Hello")
+```
+
+then:
+
+```python
+result = example()
+```
+
+makes:
+
+```python
+result = None
+```
+
+---
+
+## ATM Function Pattern
+
+```python
+def check_balance(balance):
+    return balance
+
+def deposit(balance, amount):
+    return balance + amount
+
+def withdrawal(balance, amount):
+    # check condition
+    # return updated balance when successful
+```
+
+---
+
+## Function Design Pattern
+
+When designing a function, ask:
+
+1. What information does the function need?
+2. What parameters should it receive?
+3. What should it do with the information?
+4. What should it return?
+
+---
+
+## Day 22 Key Reminder
+
+```python
+result = function(arguments)
+```
+
+means:
+
+**call the function → get the returned value → store that value in `result`.**
+
+---
