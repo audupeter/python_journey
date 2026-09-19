@@ -27,17 +27,29 @@ def withdrawal(balance, amount):
 running = True
 while running:
     show_menu()
-    choice = int(input("What do you want to do? "))
+    try:
+        choice = int(input("What do you want to do? "))
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        continue
     if choice == 1:
         print ("Your Balance is:", check_balance(balance))
     elif choice == 2:
-        amount = int(input("How much do you want to deposit? "))
-        balance = deposit(balance, amount)
-        print("Deposit successful! your balance is:", balance)
+        try:
+            amount = int(input("How much do you want to deposit? "))
+            balance = deposit(balance, amount)
+            print("Deposit successful! your balance is:", balance)
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+            continue
     elif choice == 3:
-        amount = int(input("How much do you want to withdraw? "))
-        balance = withdrawal(balance, amount)
-        print("Balance:", balance)
+        try:
+            amount = int(input("How much do you want to withdraw? "))
+            balance = withdrawal(balance, amount)
+            print("Balance:", balance)
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+            continue
     elif choice == 4:
         print("Goodbye!")
         running = False
