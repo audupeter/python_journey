@@ -953,3 +953,1058 @@ Today I learned how professional programs deal with unexpected situations. Inste
 ## Current Streak
 
 🔥 Day 20 / 365
+
+---
+## Day 21 — Function Arguments & Scope
+
+### What I Learned
+
+Today I learned how to work with **function parameters, arguments, return values, default parameters, and variable scope**.
+
+### 1. Parameters vs Arguments
+
+A **parameter** is the placeholder defined inside a function.
+
+An **argument** is the actual value given to the function when it is called.
+
+```python
+def greet(name):
+    print("Hello", name)
+
+greet("Peter")
+```
+
+* `name` → parameter
+* `"Peter"` → argument
+
+### 2. Multiple Parameters
+
+Functions can receive multiple parameters.
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+print(result)
+```
+
+### 3. Return Values
+
+`return` sends a value back from a function.
+
+```python
+def multiply(a, b):
+    return a * b
+
+answer = multiply(5, 4)
+print(answer)
+```
+
+Output:
+
+```text
+20
+```
+
+### 4. Default Parameters
+
+A default parameter provides a value when no argument is supplied.
+
+```python
+def greet(name="Peter"):
+    return "Hello " + name
+
+message = greet()
+print(message)
+```
+
+Output:
+
+```text
+Hello Peter
+```
+
+If another argument is provided, it replaces the default:
+
+```python
+greet("John")
+```
+
+### 5. Variable Scope
+
+A **local variable** is created inside a function and belongs to that function.
+
+```python
+def greet():
+    message = "Hello"
+    print(message)
+
+greet()
+```
+
+A **global variable** is created outside a function and can be accessed from inside a function.
+
+```python
+name = "Peter"
+
+def greet():
+    print(name)
+
+greet()
+```
+
+### 6. ATM Design
+
+I learned to think of ATM functions as:
+
+**Input → Processing → Return Value**
+
+For example:
+
+```python
+def deposit(balance, amount):
+    return balance + amount
+```
+
+If the balance is ₦50,000 and the deposit is ₦5,000, the function should return ₦55,000.
+
+### 7. Day 21 Project — Calculator Functions
+
+Built a calculator using separate functions for:
+
+* Addition
+* Subtraction
+* Multiplication
+* Division
+
+I also completed the stretch challenge:
+
+```python
+def calculate_total_cost(price, quantity):
+    return price * quantity
+```
+
+### Day 21 Review
+
+**Score: 49/50 — 98%**
+
+Day 21 completed successfully. 🚀🐍
+
+---
+# Day 22 — Functions: Deeper Practice
+
+## 📚 What I Learned
+
+Today I strengthened my understanding of functions and focused on how functions receive information, process it, and return values.
+
+### 1. Function Input → Processing → Output
+
+A function can receive information through parameters, process that information, and return a result.
+
+```python
+def calculate_total(price, quantity):
+    return price * quantity
+```
+
+When called:
+
+```python
+total = calculate_total(500, 3)
+```
+
+The function receives `500` and `3`, processes them, and returns `1500`.
+
+---
+
+### 2. Parameters vs Arguments
+
+**Parameters** are the names written inside the function definition.
+
+```python
+def calculate_total(price, quantity):
+```
+
+`price` and `quantity` are parameters.
+
+**Arguments** are the actual values passed when calling the function.
+
+```python
+calculate_total(500, 3)
+```
+
+`500` and `3` are arguments.
+
+---
+
+### 3. Return Values
+
+`return` sends a value back from a function.
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+```
+
+The function returns `30`, and `result` stores the returned value.
+
+Important distinction:
+
+> The variable receiving a function call stores the returned value, not the function or its arguments.
+
+---
+
+### 4. `return` Ends a Function
+
+Once Python reaches a `return` statement, the function immediately ends.
+
+```python
+def test():
+    return 10
+    print("Hello")
+```
+
+`"Hello"` will never be printed.
+
+---
+
+### 5. Functions and Variables
+
+A function does not automatically change the original variable simply because the variable was passed into it.
+
+Example:
+
+```python
+balance = 50000
+total = withdrawal(balance, 10000)
+```
+
+After the function returns:
+
+```text
+balance = 50000
+total = 40000
+```
+
+The returned value is stored in `total`.
+
+---
+
+## 🏧 ATM Design Practice
+
+I designed three functions:
+
+```python
+def check_balance(balance):
+    return balance
+
+def deposit(balance, amount):
+    return balance + amount
+
+def withdrawal(balance, amount):
+    ...
+```
+
+The functions demonstrate the idea of passing information into a function and returning a result.
+
+### Withdrawal Logic
+
+The withdrawal function checks whether the requested amount is greater than the current balance.
+
+```python
+if amount > balance:
+    print("Insufficient funds")
+else:
+    print("Withdrawal successful!")
+    return balance - amount
+```
+
+If the withdrawal is greater than the balance, no subtraction takes place.
+
+If the function reaches the end without returning a value, Python returns:
+
+```python
+None
+```
+
+---
+
+## 🧠 Day 22 Important Lesson
+
+A function follows this basic flow:
+
+```text
+Arguments
+    ↓
+Function
+    ↓
+Processing
+    ↓
+Return value
+    ↓
+Variable stores returned value
+```
+
+Example:
+
+```python
+balance = withdrawal(balance, 10000)
+```
+
+The returned balance becomes the new value stored in `balance`.
+
+---
+
+## 💻 Hands-On Challenge
+
+I built and corrected a small banking system using:
+
+* `check_balance()`
+* `deposit()`
+* `withdrawal()`
+* Function parameters
+* Function arguments
+* `return`
+* `if/else`
+
+I made mistakes with:
+
+* Hard-coding the deposit amount instead of using the `amount` parameter.
+* Subtracting money even when there were insufficient funds.
+* Putting code after `return`.
+* Confusing the original `balance` with the variable receiving a returned value.
+* Initially misunderstanding what happens when a function doesn't return a value.
+
+I corrected these mistakes through hints rather than copying a complete solution.
+
+---
+
+## 🏆 Day 22 Review
+
+**Score: 38.5/40 — 96.25%**
+
+### Breakdown
+
+* Thinking Exercise: **9.5/10**
+* ATM Design: **9/10**
+* Mentor Challenge: **10/10**
+* Mini Project: **10/10**
+
+---
+
+## 🎯 Next Step
+
+The next challenge is to combine the functions into a small interactive banking program.
+
+The goal is to understand:
+
+```text
+User input
+    ↓
+Choose operation
+    ↓
+Call function
+    ↓
+Receive returned value
+    ↓
+Update balance
+    ↓
+Display result
+    ↓
+Repeat
+```
+
+This will move from designing individual functions to building a complete program using multiple functions.
+
+---
+
+## 🔥 Day 22 Reflection
+
+Today I became more comfortable with how functions actually move information through a program.
+
+I learned that `return` doesn't just give a value back — it also ends the function.
+
+I also learned that when I pass a variable such as `balance` into a function, the function can calculate a new value and return it, which I can then assign back to a variable.
+
+**We adapt. We don't stop. 🐍🔥**
+
+# Day 23 — Applying `try/except` to Real Programs
+
+## 📚 What I Learned
+
+Today I took the banking program I built on Day 22 and made it **crash-proof** by applying the error handling I learned on Day 20.
+
+### 1. Guarding User Input
+
+The three risky lines in the program are:
+
+```python
+choice = int(input("What do you want to do? "))
+amount = int(input("How much do you want to deposit? "))
+amount = int(input("How much do you want to withdraw? "))
+````
+
+Each one can crash with `ValueError` if the user types something that isn't a number.
+
+The fix is to wrap each one in `try/except`:
+
+```python
+try:
+    choice = int(input("What do you want to do? "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+```
+
+### 2. The Exact Error Name Matters
+
+Python raises `ValueError` when `int()` receives something it can't convert.
+
+```python
+int("hello")   # ValueError
+```
+
+Not "data type error" — the exact name is `ValueError`.
+
+This matters because:
+
+```python
+except ValueError:
+```
+
+will catch it, but:
+
+```python
+except DataTypeError:
+```
+
+would not.
+
+### 3. Keep `try` Blocks Small
+
+The `try` block should wrap **only the line(s) that can actually raise the error**.
+
+**❌ Too broad:**
+
+```python
+try:
+    amount = int(input("How much do you want to deposit? "))
+    balance = deposit(balance, amount)
+    print("Deposit successful! your balance is:", balance)
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+```
+
+Only the first line can raise `ValueError`. The `deposit()` call and `print()` do not need to be protected by this `try`.
+
+**✅ Tight:**
+
+```python
+try:
+    amount = int(input("How much do you want to deposit? "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+
+balance = deposit(balance, amount)
+print("Deposit successful! your balance is:", balance)
+```
+
+**Why it matters:** a broad `try` can hide unrelated bugs behind a fake "Invalid input" message, making debugging harder.
+
+### 4. When `continue` Is Required
+
+Use `continue` when a later line in the same loop iteration **depends on the variable that failed to assign**.
+
+```python
+try:
+    choice = int(input("What do you want to do? "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+
+if choice == 1:
+    ...
+```
+
+If `int()` fails, `choice` is **never assigned**.
+
+Without `continue`, the next line would try to use `choice` and cause:
+
+```text
+NameError: name 'choice' is not defined
+```
+
+### 5. When `continue` Is Optional
+
+If the `except` block is the **last thing in its branch**, the loop moves on naturally.
+
+```python
+elif choice == 2:
+    try:
+        amount = int(input("How much do you want to deposit? "))
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        continue
+
+    balance = deposit(balance, amount)
+```
+
+In this structure, `continue` is harmless, but the loop would also naturally move on once the branch finishes.
+
+---
+
+## 🏧 ATM Design Practice
+
+I applied the `try/except` pattern to the banking program's:
+
+* Menu choice
+* Deposit amount
+* Withdrawal amount
+
+### Menu Choice
+
+```python
+try:
+    choice = int(input("What do you want to do? "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+```
+
+### Deposit Amount
+
+```python
+try:
+    amount = int(input("How much do you want to deposit? "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+
+balance = deposit(balance, amount)
+print("Deposit successful! your balance is:", balance)
+```
+
+### Withdrawal Amount
+
+The same `try/except` pattern was applied to the withdrawal amount.
+
+---
+
+## 🧠 Day 23 Important Lesson
+
+`try/except` isn't just a way to prevent crashes.
+
+It helps keep the program running **with a known state**.
+
+When `int()` fails:
+
+```text
+variable → undefined (does not exist)
+```
+
+It is not a wrong value or an old value.
+
+The variable was never successfully assigned.
+
+That's why `continue` matters in situations where the rest of the loop iteration depends on that variable.
+
+---
+
+## 💻 Hands-On Challenge
+
+I upgraded my Day 22 `banking_program.py` so it no longer crashes on bad input.
+
+### Before
+
+Typing `hello` at a numeric prompt crashed the program with:
+
+```text
+ValueError
+```
+
+### After
+
+Typing `hello` prints:
+
+```text
+Invalid input. Please enter a number.
+```
+
+and the menu reappears.
+
+### Mistakes I made
+
+* Wrapped too much code inside the `try` block.
+* Initially described the error as "data type error" instead of `ValueError`.
+* Initially thought `continue` was mainly about "keeping the loop going" instead of understanding that it skips the rest of the current iteration.
+* Needed to understand more precisely when a variable has actually been assigned.
+
+I corrected these through hints and follow-up questions.
+
+---
+
+# Day 23 — Applying `try/except` to Real Programs
+
+## 📚 What I Learned
+
+Today I took the banking program I built on Day 22 and made it **crash-proof** by applying the error handling I learned on Day 20.
+
+### 1. Guarding User Input
+
+The three risky lines in the program are:
+
+```python
+choice = int(input("What do you want to do? "))
+amount = int(input("How much do you want to deposit? "))
+amount = int(input("How much do you want to withdraw? "))
+````
+
+Each one can crash with `ValueError` if the user types something that isn't a number.
+
+The fix is to wrap each one in `try/except`:
+
+```python
+try:
+    choice = int(input("What do you want to do? "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+```
+
+### 2. The Exact Error Name Matters
+
+Python raises `ValueError` when `int()` receives something it can't convert.
+
+```python
+int("hello")   # ValueError
+```
+
+Not "data type error" — the exact name is `ValueError`.
+
+This matters because:
+
+```python
+except ValueError:
+```
+
+will catch it, but:
+
+```python
+except DataTypeError:
+```
+
+would not.
+
+### 3. Keep `try` Blocks Small
+
+The `try` block should wrap **only the line(s) that can actually raise the error**.
+
+**❌ Too broad:**
+
+```python
+try:
+    amount = int(input("How much do you want to deposit? "))
+    balance = deposit(balance, amount)
+    print("Deposit successful! your balance is:", balance)
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+```
+
+Only the first line can raise `ValueError`. The `deposit()` call and `print()` do not need to be protected by this `try`.
+
+**✅ Tight:**
+
+```python
+try:
+    amount = int(input("How much do you want to deposit? "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+
+balance = deposit(balance, amount)
+print("Deposit successful! your balance is:", balance)
+```
+
+**Why it matters:** a broad `try` can hide unrelated bugs behind a fake "Invalid input" message, making debugging harder.
+
+### 4. When `continue` Is Required
+
+Use `continue` when a later line in the same loop iteration **depends on the variable that failed to assign**.
+
+```python
+try:
+    choice = int(input("What do you want to do? "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+
+if choice == 1:
+    ...
+```
+
+If `int()` fails, `choice` is **never assigned**.
+
+Without `continue`, the next line would try to use `choice` and cause:
+
+```text
+NameError: name 'choice' is not defined
+```
+
+### 5. When `continue` Is Optional
+
+If the `except` block is the **last thing in its branch**, the loop moves on naturally.
+
+```python
+elif choice == 2:
+    try:
+        amount = int(input("How much do you want to deposit? "))
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        continue
+
+    balance = deposit(balance, amount)
+```
+
+In this structure, `continue` is harmless, but the loop would also naturally move on once the branch finishes.
+
+---
+
+## 🏧 ATM Design Practice
+
+I applied the `try/except` pattern to the banking program's:
+
+* Menu choice
+* Deposit amount
+* Withdrawal amount
+
+### Menu Choice
+
+```python
+try:
+    choice = int(input("What do you want to do? "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+```
+
+### Deposit Amount
+
+```python
+try:
+    amount = int(input("How much do you want to deposit? "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+
+balance = deposit(balance, amount)
+print("Deposit successful! your balance is:", balance)
+```
+
+### Withdrawal Amount
+
+The same `try/except` pattern was applied to the withdrawal amount.
+
+---
+
+## 🧠 Day 23 Important Lesson
+
+`try/except` isn't just a way to prevent crashes.
+
+It helps keep the program running **with a known state**.
+
+When `int()` fails:
+
+```text
+variable → undefined (does not exist)
+```
+
+It is not a wrong value or an old value.
+
+The variable was never successfully assigned.
+
+That's why `continue` matters in situations where the rest of the loop iteration depends on that variable.
+
+---
+
+## 💻 Hands-On Challenge
+
+I upgraded my Day 22 `banking_program.py` so it no longer crashes on bad input.
+
+### Before
+
+Typing `hello` at a numeric prompt crashed the program with:
+
+```text
+ValueError
+```
+
+### After
+
+Typing `hello` prints:
+
+```text
+Invalid input. Please enter a number.
+```
+
+and the menu reappears.
+
+### Mistakes I made
+
+* Wrapped too much code inside the `try` block.
+* Initially described the error as "data type error" instead of `ValueError`.
+* Initially thought `continue` was mainly about "keeping the loop going" instead of understanding that it skips the rest of the current iteration.
+* Needed to understand more precisely when a variable has actually been assigned.
+
+I corrected these through hints and follow-up questions.
+
+---
+
+# Day 23 — Applying `try/except` to Real Programs ##
+
+📚 What I Learned Today I took the banking program I built on Day 22 and made it **crash-proof** by applying the error handling I learned on Day 20. ### 1. Guarding User Input The three risky lines in the program are:
+
+```python 
+choice = int(input("What do you want to do? ")) amount = int(input("How much do you want to deposit? ")) amount = int(input("How much do you want to withdraw? "))
+
+```
+Each one can crash with ValueError if the user types something that isn't a number.
+
+# The fix is to wrap each one in try/except:
+
+```python
+try:
+    choice = int(input("What do you want to do? "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+2. The Exact Error Name Matters
+
+Python raises ValueError when int() receives something it can't convert.
+
+int("hello")   # ValueError
+
+Not "data type error" — the exact name is ValueError.
+
+This matters because:
+
+except `ValueError:
+
+will catch it, but:
+
+except `DataTypeError:
+
+would not.
+
+3. Keep try Blocks Small
+
+The try block should wrap only the line(s) that can actually raise the error.
+
+❌ Too broad:
+
+try:
+    amount = int(input("How much do you want to deposit? "))
+    balance = deposit(balance, amount)
+    print("Deposit successful! your balance is:", balance)
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+
+Only the first line can raise ValueError. The deposit() call and print() do not need to be protected by this try.
+
+✅ Tight:
+
+try:
+    amount = int(input("How much do you want to deposit? "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+
+balance = deposit(balance, amount)
+print("Deposit successful! your balance is:", balance)
+
+Why it matters: a broad try can hide unrelated bugs behind a fake "Invalid input" message, making debugging harder.
+
+4. When continue Is Required
+
+Use continue when a later line in the same loop iteration depends on the variable that failed to assign.
+
+try:
+    choice = int(input("What do you want to do? "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+
+if choice == 1:
+    ...
+
+If int() fails, choice is never assigned.
+
+Without continue, the next line would try to use choice and cause:
+
+NameError: name 'choice' is not defined
+5. When continue Is Optional
+
+If the except block is the last thing in its branch, the loop moves on naturally.
+
+elif choice == 2:
+    try:
+        amount = int(input("How much do you want to deposit? "))
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        continue
+
+    balance = deposit(balance, amount)
+
+In this structure, continue is harmless, but the loop would also naturally move on once the branch finishes.
+
+🏧 ATM Design Practice
+
+I applied the try/except pattern to the banking program's:
+
+Menu choice
+Deposit amount
+Withdrawal amount
+Menu Choice
+
+try:
+    choice = int(input("What do you want to do? "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+Deposit Amount
+try:
+    amount = int(input("How much do you want to deposit? "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+
+balance = deposit(balance, amount)
+print("Deposit successful! your balance is:", balance)
+Withdrawal Amount
+
+The same try/except pattern was applied to the withdrawal amount.
+
+```
+
+## 🧠 Day 23 Important Lesson
+
+`try/except` isn't just a way to prevent crashes.
+
+It helps keep the program running with a known state.
+
+When int() fails:
+
+variable → undefined (does not exist)
+
+It is not a wrong value or an old value.
+
+The variable was never successfully assigned.
+
+That's why continue matters in situations where the rest of the loop iteration depends on that variable.
+
+## 💻 Hands-On Challenge
+
+I upgraded my Day 22 `banking_program.py` so it no longer crashes on bad input.
+
+Before
+
+Typing `hello` at a numeric prompt crashed the program with:
+
+`ValueError`
+
+After
+
+Typing `hello` prints:
+
+Invalid input. Please enter a number.
+
+and the menu reappears.
+
+## Mistakes I made:
+
+Wrapped too much code inside the try block.
+Initially described the error as "data type error" instead of ValueError.
+Initially thought continue was mainly about "keeping the loop going" instead of understanding that it skips the rest of the current iteration.
+Needed to understand more precisely when a variable has actually been assigned.
+
+I corrected these through hints and follow-up questions.
+
+## 🏆 Day 23 Review 
+
+**Score: ~79%**
+
+### Breakdown
+
+| Section                     |         Score |
+| --------------------------- | ------------: |
+| Pre-code reasoning (Q1–Q4)  | 27/40 = 67.5% |
+| Code implementation         |   45/50 = 90% |
+| Post-code reasoning (Q1–Q2) |   16/20 = 80% |
+| **Day 23 average**          |      **~79%** |
+
+### What went well
+
+* Applied a Day 20 concept to a real program.
+* Built a working interactive banking program.
+* Correctly used `ValueError`.
+* Correctly handled invalid menu input.
+* Correctly understood why a failed `int()` conversion means the variable was never assigned.
+
+### Growth Area
+
+My biggest growth area is **precision about variables and program flow**.
+
+I need to understand exactly:
+
+* when a variable exists,
+* when a variable receives a value,
+* what happens when an exception interrupts assignment,
+* and why `continue` is sometimes necessary.
+
+---
+
+## 🎯 Next Step
+
+Move to **transaction history**.
+
+The banking program will start tracking every deposit and withdrawal in a list.
+
+Example:
+
+```python
+transactions = []
+
+transactions.append("Deposit: N5000")
+transactions.append("Withdraw: N2000")
+transactions.append("Deposit: N1000")
+```
+
+Then use a `for` loop to display the transaction history:
+
+```python
+for transaction in transactions:
+    print(transaction)
+```
+
+After that, the next step will be saving the transaction history to a file so it can persist after the program closes.
+
+---
+
+## 🔥 Day 23 Reflection
+
+Today I learned to apply a concept I already knew (`try/except` from Day 20) in a real working program instead of only using it in isolated exercises.
+
+The biggest lesson was precision.
+
+A `try` block should protect the code that can actually fail, and `continue` can be used to skip the rest of a loop iteration when a variable was never successfully assigned.
+
+I now have a working banking program that handles bad input without crashing.
+
+**We adapt. We don't stop. 🐍🔥**
+
+---

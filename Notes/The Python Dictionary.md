@@ -1608,4 +1608,303 @@ This is the foundation for combining multiple functions into larger programs.
 
 ---
 
-**Current Streak:** 🔥 Day 22 / 365
+# Day 23 — Applying `try/except` to Real Programs
+
+## `ValueError`
+
+Raised when a function receives a value that cannot be used as required.
+
+Example:
+
+```python
+int("hello")
+````
+
+This raises:
+
+```text
+ValueError
+```
+
+A common situation is converting user input:
+
+```python
+int(input("Age: "))
+```
+
+If the user enters letters instead of a number, Python raises `ValueError`.
+
+---
+
+## `try`
+
+A block containing code that might raise an exception.
+
+```python
+try:
+    number = int(input("Enter a number: "))
+```
+
+---
+
+## `except`
+
+A block that runs when a specified exception occurs.
+
+```python
+try:
+    number = int(input("Enter a number: "))
+except ValueError:
+    print("That's not a number.")
+```
+
+### Simple mental model
+
+```text
+try
+ ↓
+attempt the risky operation
+ ↓
+error?
+ ↓
+except handles it
+```
+
+---
+
+## `try/except`
+
+Used to catch and handle errors so the program can respond instead of crashing.
+
+```python
+try:
+    number = int(input("Enter a number: "))
+except ValueError:
+    print("Invalid input.")
+```
+
+### Best practice
+
+Keep the `try` block as small as possible.
+
+Only protect the code that can actually raise the error you are handling.
+
+---
+
+## `continue`
+
+`continue` skips the rest of the current loop iteration and moves to the next iteration.
+
+Example:
+
+```python
+for n in range(5):
+    if n == 2:
+        continue
+
+    print(n)
+```
+
+Output:
+
+```text
+0
+1
+3
+4
+```
+
+### Common use in input validation
+
+```python
+while True:
+    try:
+        choice = int(input("Choose: "))
+    except ValueError:
+        print("Invalid input.")
+        continue
+
+    if choice == 1:
+        ...
+```
+
+If the conversion fails, `continue` prevents the program from reaching code that depends on `choice`.
+
+---
+
+## `NameError`
+
+Raised when Python tries to use a variable that has not been defined.
+
+Example:
+
+```python
+print(x)
+```
+
+If `x` has never been defined, Python raises:
+
+```text
+NameError
+```
+
+### Connection to Day 23
+
+Consider:
+
+```python
+try:
+    choice = int(input("Choose: "))
+except ValueError:
+    print("Invalid input.")
+
+if choice == 1:
+    print("Balance")
+```
+
+If the user enters something like `"hello"`:
+
+1. `int()` raises `ValueError`.
+2. The assignment to `choice` does not successfully happen.
+3. The program continues past the `except`.
+4. `if choice == 1:` tries to use `choice`.
+5. Python can raise `NameError`.
+
+Using `continue` prevents the rest of that loop iteration from reaching the invalid reference.
+
+---
+
+## Tight `try` Blocks
+
+### ❌ Too Broad
+
+```python
+try:
+    amount = int(input("Amount: "))
+    balance = deposit(balance, amount)
+    print("Done:", balance)
+except ValueError:
+    print("Invalid input.")
+```
+
+### ✅ Better
+
+```python
+try:
+    amount = int(input("Amount: "))
+except ValueError:
+    print("Invalid input.")
+    continue
+
+balance = deposit(balance, amount)
+print("Done:", balance)
+```
+
+### Why?
+
+A small `try` block:
+
+1. Makes the risky operation obvious.
+2. Prevents unrelated problems from being reported as input errors.
+3. Makes debugging easier.
+4. Keeps error handling precise.
+
+---
+
+## Guarding User Input
+
+Standard pattern:
+
+```python
+try:
+    value = int(input("Enter a number: "))
+except ValueError:
+    print("Invalid input. Please enter a number.")
+    continue
+```
+
+Useful for:
+
+* Menu choices
+* Deposit amounts
+* Withdrawal amounts
+* Other numeric user input
+
+---
+
+## `continue` — Required vs Optional
+
+| Situation                                                         | `continue`       |
+| ----------------------------------------------------------------- | ---------------- |
+| A later line in the same iteration depends on the failed variable | **Required**     |
+| The `except` is effectively the end of the branch/iteration       | May be redundant |
+
+The important thing is not memorizing "required" or "optional."
+
+Understand **what code will execute after the `except`**.
+
+---
+
+## Common Mistakes Corrected
+
+### Mistake 1 — Calling it "data type error"
+
+The exact Python error name is:
+
+```python
+ValueError
+```
+
+Example:
+
+```python
+int("hello")
+```
+
+---
+
+### Mistake 2 — Wrapping too much code in `try`
+
+```python
+try:
+    amount = int(input("Amount: "))
+    balance = deposit(balance, amount)
+    print("Done:", balance)
+except ValueError:
+    print("Invalid input.")
+```
+
+Better:
+
+```python
+try:
+    amount = int(input("Amount: "))
+except ValueError:
+    print("Invalid input.")
+    continue
+
+balance = deposit(balance, amount)
+print("Done:", balance)
+```
+
+---
+
+### Mistake 3 — Thinking `continue` "keeps the loop going"
+
+The loop is already going.
+
+`continue` specifically means:
+
+> **Stop the current iteration here and start the next iteration.**
+
+---
+
+## Day 23 Key Lesson
+
+> **`try` blocks should be small. `continue` skips the rest of the current loop iteration. `ValueError` is the exact error name for failed `int()` conversions.**
+
+This is an important foundation for writing interactive programs that handle bad user input without crashing.
+
+---
+
+**Current Streak:** 🔥 Day 23 / 365
