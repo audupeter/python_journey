@@ -1,4 +1,5 @@
 balance = 50000
+transactions = []
 print("="*50)
 print("                 BANKING PROGRAM")
 print("="*50)
@@ -8,7 +9,8 @@ def show_menu():
     print("1. Check balance")
     print("2. Deposit")
     print("3. Withdrawal")
-    print("4. Exit")
+    print("4. Mini statement")
+    print("5. Exit")
 
 def check_balance(balance):
     return balance
@@ -33,11 +35,12 @@ while running:
         print("Invalid input. Please enter a number.")
         continue
     if choice == 1:
-        print ("Your Balance is:", check_balance(balance))
+        print (f"Your Balance is: N{check_balance(balance)}")
     elif choice == 2:
         try:
             amount = int(input("How much do you want to deposit? "))
             balance = deposit(balance, amount)
+            transactions.append(f"Deposit: N{amount}")
             print("Deposit successful! your balance is:", balance)
         except ValueError:
             print("Invalid input. Please enter a number.")
@@ -46,11 +49,18 @@ while running:
         try:
             amount = int(input("How much do you want to withdraw? "))
             balance = withdrawal(balance, amount)
+            if amount < balance:
+                transactions.append(f"Withdraw: N{amount}")
             print("Balance:", balance)
         except ValueError:
             print("Invalid input. Please enter a number.")
             continue
     elif choice == 4:
+        print('Transaction History:')
+        for transaction in transactions:
+            print(transaction)
+            continue
+    elif choice == 5:
         print("Goodbye!")
         running = False
     else:

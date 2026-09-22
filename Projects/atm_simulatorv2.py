@@ -30,13 +30,22 @@ def withdraw():
         print("Withdrawal Successful")
         print("Remaining Balance:", balance - withdraw)
 
-show_menu()
-choose_option = int(input("Choose an option: "))
-if choose_option == 1:
-    check_balance()
-elif choose_option == 2:
-    deposit()
-elif choose_option == 3:
-    withdraw()    
-elif choose_option == 4:
-    print("Thank you for banking with us!")
+running = True
+while running:
+    show_menu()
+    try:
+        choose_option = int(input("Choose an option: "))
+    except ValueError:
+        print("Invalid input. Enter a number")
+        continue
+    if choose_option == 1:
+        check_balance()
+    elif choose_option == 2:
+        deposit()
+    elif choose_option == 3:
+        withdraw() 
+    elif choose_option == 4:
+        print("Thank you for banking with us!")
+        running = False
+    else: 
+        print("Invalid option. Please enter a valid option.")
