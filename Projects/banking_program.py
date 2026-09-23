@@ -49,7 +49,7 @@ while running:
         try:
             amount = int(input("How much do you want to withdraw? "))
             balance = withdrawal(balance, amount)
-            if amount < balance:
+            if balance <= amount:
                 transactions.append(f"Withdraw: N{amount}")
             print("Balance:", balance)
         except ValueError:
