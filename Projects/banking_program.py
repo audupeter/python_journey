@@ -48,9 +48,9 @@ while running:
     elif choice == 3:
         try:
             amount = int(input("How much do you want to withdraw? "))
-            balance = withdrawal(balance, amount)
-            if balance <= amount:
+            if balance >= amount:
                 transactions.append(f"Withdraw: N{amount}")
+            balance = withdrawal(balance, amount)
             print("Balance:", balance)
         except ValueError:
             print("Invalid input. Please enter a number.")
