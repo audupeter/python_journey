@@ -56,7 +56,9 @@ while running:
             print("Invalid input. Please enter a number.")
             continue
     elif choice == 4:
-        print('Transaction History:')
+        print("="*40)
+        print("             MINI STATEMENT")
+        print("="*40)
         for transaction in transactions:
             print(transaction)
             continue
