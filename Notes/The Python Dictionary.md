@@ -1907,4 +1907,350 @@ This is an important foundation for writing interactive programs that handle bad
 
 ---
 
-**Current Streak:** 🔥 Day 23 / 365
+# 📖 Python Dictionary
+
+## Day 24 — Transaction History
+
+### Transaction History
+
+**Definition:**
+A transaction history is a collection used by a program to remember transactions that have happened during the current session.
+
+In the banking program, a list is used:
+
+```python
+transactions = []
+```
+
+Transactions can then be added:
+
+```python
+transactions.append("Deposit: N5000")
+```
+
+---
+
+### `.append()`
+
+**Definition:**
+`.append()` adds one item to the end of a list.
+
+Example:
+
+```python
+transactions = []
+
+transactions.append("Deposit: N5000")
+transactions.append("Withdraw: N2000")
+```
+
+The list becomes:
+
+```python
+[
+    "Deposit: N5000",
+    "Withdraw: N2000"
+]
+```
+
+### Important
+
+`.append()` does not replace the existing list.
+
+It adds another item to it.
+
+---
+
+### `for` Loop With a List
+
+A `for` loop can be used to process every item in a list.
+
+```python
+for transaction in transactions:
+    print(transaction)
+```
+
+If the list contains:
+
+```python
+[
+    "Deposit: N5000",
+    "Withdraw: N2000",
+    "Deposit: N1000"
+]
+```
+
+the loop prints each transaction in order.
+
+---
+
+### Program State
+
+**Definition:**
+Program state is the information a program currently remembers while it is running.
+
+In the banking program, examples include:
+
+```python
+balance = 50000
+transactions = []
+```
+
+As the user performs transactions, the state changes.
+
+For example:
+
+```python
+balance = deposit(balance, 5000)
+transactions.append("Deposit: N5000")
+```
+
+Now the program remembers both the updated balance and the transaction.
+
+---
+
+### Successful Transactions Only
+
+A failed transaction should not be added to the transaction history.
+
+Example:
+
+```python
+if balance >= amount:
+    transactions.append(f"Withdraw: N{amount}")
+```
+
+This prevents failed withdrawals from appearing as successful transactions.
+
+---
+
+### Old State vs New State
+
+One important debugging lesson from Day 24 was understanding **when** a value changes.
+
+For example:
+
+```python
+balance = withdrawal(balance, amount)
+```
+
+changes `balance` to the returned value.
+
+Therefore, checking `balance` **after this line** means you are checking the new balance, not the original balance.
+
+When deciding whether a withdrawal should be recorded, the original balance needs to be checked before the balance is updated.
+
+---
+
+# Day 25 — Formatting & `for` Loops
+
+## List Length
+
+**Definition:**
+`len()` returns the number of items inside a collection.
+
+Example:
+
+```python
+transactions = [
+    "Deposit: N5000",
+    "Withdraw: N2000",
+    "Deposit: N3000"
+]
+
+print(len(transactions))
+```
+
+Output:
+
+```text
+3
+```
+
+### Important Difference
+
+Python starts indexing from `0`, but that does **not** mean a list with three items has a length of 2.
+
+For:
+
+```python
+["A", "B", "C"]
+```
+
+The indexes are:
+
+```text
+A → 0
+B → 1
+C → 2
+```
+
+But the length is:
+
+```text
+3
+```
+
+---
+
+## Loop Variable
+
+In:
+
+```python
+for transaction in transactions:
+    print(transaction)
+```
+
+`transaction` is the loop variable.
+
+During each iteration, it represents the current item from `transactions`.
+
+Example:
+
+```text
+Iteration 1 → "Deposit: N5000"
+Iteration 2 → "Withdraw: N2000"
+Iteration 3 → "Deposit: N3000"
+```
+
+---
+
+## String Repetition
+
+Python allows strings to be multiplied by integers.
+
+```python
+"=" * 40
+```
+
+This produces a string containing 40 `=` characters.
+
+This is useful for formatting terminal output.
+
+Example:
+
+```python
+print("=" * 40)
+print("             MINI STATEMENT")
+print("=" * 40)
+```
+
+---
+
+## Empty List in a `for` Loop
+
+If:
+
+```python
+transactions = []
+```
+
+then:
+
+```python
+for transaction in transactions:
+    print(transaction)
+```
+
+runs zero times.
+
+Why?
+
+Because there are no items for the loop to process.
+
+It does not:
+
+* crash
+* print `None`
+* print an empty transaction
+
+It simply performs no iterations.
+
+---
+
+## Mini Statement
+
+A formatted mini statement can combine several concepts:
+
+```python
+print("=" * 40)
+print("             MINI STATEMENT")
+print("=" * 40)
+
+print("Transaction History:")
+
+for transaction in transactions:
+    print(transaction)
+
+print("=" * 40)
+```
+
+This combines:
+
+* `print()`
+* string repetition
+* lists
+* `for` loops
+* loop variables
+* transaction history
+
+---
+
+# 🧠 Day 24–25 Important Corrections
+
+### ❌ Incorrect
+
+A list containing three items has a length of 2 because Python starts counting from 0.
+
+### ✅ Correct
+
+A list containing three items has a **length of 3**.
+
+Python's indexes start at `0`, but `len()` counts the actual number of items.
+
+---
+
+### ❌ Incorrect
+
+An empty list causes a `for` loop to crash.
+
+### ✅ Correct
+
+A `for` loop over an empty list executes **zero times**.
+
+---
+
+### ❌ Incorrect
+
+A failed withdrawal should still be recorded before checking whether it succeeded.
+
+### ✅ Correct
+
+Only record a withdrawal after confirming that sufficient funds are available.
+
+---
+
+# 🏦 Banking Program Mental Model
+
+```text
+User performs transaction
+        ↓
+Check whether transaction is valid
+        ↓
+Perform transaction
+        ↓
+Update balance
+        ↓
+Record successful transaction
+        ↓
+Continue program
+        ↓
+Mini Statement
+        ↓
+for loop displays history
+```
+
+This is an important step toward thinking about Python programs as systems rather than isolated lines of code.
+
+**Current Streak:** 🔥 Day 25 / 365

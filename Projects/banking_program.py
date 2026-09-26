@@ -26,8 +26,7 @@ def withdrawal(balance, amount):
         print("Withdrawal Successful!")
     return balance - amount
 
-running = True
-while running:
+while True:
     show_menu()
     try:
         choice = int(input("What do you want to do? "))
@@ -64,6 +63,6 @@ while running:
             continue
     elif choice == 5:
         print("Goodbye!")
-        running = False
+        break
     else:
         print("Invalid Option. Enter a valid option.")
