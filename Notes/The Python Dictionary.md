@@ -2253,4 +2253,205 @@ for loop displays history
 
 This is an important step toward thinking about Python programs as systems rather than isolated lines of code.
 
-**Current Streak:** 🔥 Day 25 / 365
+---
+# Day 26 — `break` & `continue`
+
+## `break`
+
+`break` immediately terminates the nearest enclosing loop. Python does not continue through the remaining iterations of that loop.
+
+```python
+for number in range(1, 6):
+    print(number)
+    if number == 3:
+        break
+```
+
+Output:
+
+```text
+1
+2
+3
+```
+
+The number `3` prints before Python reaches `break`. Numbers `4` and `5` are never processed by the loop.
+
+## `continue`
+
+`continue` skips the remaining statements in the current iteration and moves to the next iteration.
+
+```python
+for number in range(1, 6):
+    if number == 3:
+        continue
+    print(number)
+```
+
+Output:
+
+```text
+1
+2
+4
+5
+```
+
+The print statement is skipped when `number` is `3`, but the loop continues with `4` and `5`.
+
+## Combining `break` and `continue`
+
+```python
+for number in range(1, 8):
+    if number == 3:
+        continue
+    if number == 6:
+        break
+    print(number)
+```
+
+Output:
+
+```text
+1
+2
+4
+5
+```
+
+- `3` is skipped by `continue`.
+- `6` triggers `break` before it is printed.
+- `7` is never reached because the loop has already ended.
+
+## `break` in a menu loop
+
+```python
+while True:
+    choice = input("Choose an option: ")
+    if choice == "5":
+        print("Goodbye!")
+        break
+```
+
+`while True` repeats indefinitely until a statement such as `break` exits the loop. This can replace a separate `running` flag for a simple menu exit.
+
+## Redundant `continue`
+
+```python
+for transaction in transactions:
+    print(transaction)
+    continue
+```
+
+This `continue` is unnecessary because there is no additional statement after it in the loop body. Removing it still prints all transactions in order.
+
+## Common misunderstanding
+
+`continue` does not itself test a condition. It executes when Python reaches it. A surrounding `if` can determine when it should execute.
+
+## Day 26 Key Lesson
+
+> `break` exits the loop. `continue` skips the rest of the current iteration and proceeds to the next one.
+
+---
+
+## Day 27 - Nested Loops
+
+A **nested loop** is a loop placed inside another loop. The outer loop controls the larger repetition; the inner loop performs its complete sequence for each iteration of the outer loop.
+
+```python
+for number in range(1, 4):
+    for letter in ["A", "B"]:
+        print(number, letter)
+```
+
+Output:
+
+```text
+1 A
+1 B
+2 A
+2 B
+3 A
+3 B
+```
+
+Python completes the inner loop for `number = 1` before moving to `number = 2`. The inner loop then starts again at its first item.
+
+### Nested loops and `range()`
+
+```python
+for day in range(1, 3):
+    for task in range(1, 4):
+        print("Day", day, "Task", task)
+```
+
+- The outer loop uses `range(1, 3)`, producing `1` and `2` (the stop value `3` is excluded).
+- The inner loop uses `range(1, 4)`, producing `1`, `2`, and `3` (the stop value `4` is excluded).
+- The output has six lines: three tasks for Day 1 and three tasks for Day 2.
+- If the inner loop runs fully for each outer iteration, the total number of inner-loop executions is the number of outer iterations multiplied by the number of inner iterations per outer iteration.
+
+### `continue` inside a nested loop
+
+```python
+for number in range(1, 4):
+    for step in range(1, 3):
+        if number == 2:
+            continue
+        print(number, step)
+```
+
+Output:
+
+```text
+1 1
+1 2
+3 1
+3 2
+```
+
+When `number == 2`, the `continue` statement skips the rest of each inner-loop iteration. It does not terminate the outer loop; the outer loop advances to `number == 3` afterward.
+
+### `break` inside a nested loop
+
+```python
+for number in range(1, 4):
+    for step in range(1, 4):
+        if step == 2:
+            break
+        print(number, step)
+```
+
+Output:
+
+```text
+1 1
+2 1
+3 1
+```
+
+`break` exits the **innermost loop containing it**. Here, the inner loop stops when `step == 2`, but the outer loop continues with the next `number`.
+
+### Practical example: accounts and transactions
+
+```python
+for account in range(1, 3):
+    for transaction in range(1, 4):
+        print("Account", account, "Transaction", transaction)
+```
+
+This represents two accounts with three transactions each and prints six lines. The same pattern can represent tasks for each day, students for each class, or items within each order.
+
+### Common misunderstandings
+
+- The inner loop does **not** alternate with the outer loop; it completes first for the current outer value.
+- The inner loop's range is independent of the outer loop's range.
+- `continue` skips the current iteration of the loop where it appears.
+- `break` exits the loop where it appears, not automatically every nested loop.
+- If the inner loop is skipped for an outer-loop value because of `break` or `continue`, the outer loop may still advance, depending on the code and which loop contains the statement.
+
+## Day 27 Key Lesson
+
+> For every iteration of the outer loop, the inner loop runs through its own iterations. In nested loops, `break` and `continue` affect the loop where they are written.
+
+**Current Streak:** 🔥 Day 27 / 365

@@ -2356,3 +2356,85 @@ I correctly applied `break` to the banking program and learned to predict the ef
 **Day 27 — Nested Loops.** Learn how one loop can run inside another, practise tracing the execution order, and explore a practical use case.
 
 **We adapt. We don't stop. 🐍🔥**
+
+---
+
+## Day 27 — Nested Loops
+
+**Nested loops** are loops placed inside other loops. For each iteration of the outer loop, Python runs the inner loop from beginning to end.
+
+```python
+for account in range(1, 3):
+    for transaction in range(1, 4):
+        print("Account", account, "Transaction", transaction)
+```
+
+Output:
+
+```text
+Account 1 Transaction 1
+Account 1 Transaction 2
+Account 1 Transaction 3
+Account 2 Transaction 1
+Account 2 Transaction 2
+Account 2 Transaction 3
+```
+
+- `range(1, 3)` produces `1, 2`, so the outer loop runs twice.
+- `range(1, 4)` produces `1, 2, 3`, so the inner loop runs three times for each account.
+- Total printed lines: `2 × 3 = 6`.
+- When the outer loop advances to a new account, the inner loop starts again from its first transaction.
+
+### `continue` inside a nested loop
+
+```python
+for number in range(1, 4):
+    for step in range(1, 3):
+        if number == 2:
+            continue
+        print(number, step)
+```
+
+Output:
+
+```text
+1 1
+1 2
+3 1
+3 2
+```
+
+When `number == 2`, `continue` skips the rest of each inner-loop iteration, including `print()`. The outer loop still advances to `number == 3`.
+
+### `break` inside a nested loop
+
+```python
+for number in range(1, 4):
+    for step in range(1, 4):
+        if step == 2:
+            break
+        print(number, step)
+```
+
+Output:
+
+```text
+1 1
+2 1
+3 1
+```
+
+`break` exits the **inner loop where it appears**. The outer loop continues, so each outer iteration prints its `step == 1` line before the inner loop breaks at `step == 2`.
+
+### Banking-program connection
+
+Nested loops can represent multiple transactions for each account, or multiple tasks for each day. They are useful when one repeated process happens inside another repeated process.
+
+## 🏆 Day 27 Review
+
+- Understood that the inner loop completes all its iterations for each outer-loop value.
+- Traced nested-loop output without running the code.
+- Applied `continue` and `break` inside an inner loop and identified that each affects the loop where it appears.
+- Calculated total iterations by multiplying outer iterations by inner iterations when the inner loop runs fully each time.
+
+**We adapt. We don't stop. 🐍🔥**

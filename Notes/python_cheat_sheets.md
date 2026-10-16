@@ -1025,3 +1025,49 @@ means:
 **call the function → get the returned value → store that value in `result`.**
 
 ---
+
+## Day 27 - Nested loops
+
+A nested loop is a loop inside another loop. The inner loop completes all its iterations for each outer-loop iteration.
+
+```python
+for account in range(1, 3):
+    for transaction in range(1, 4):
+        print("Account", account, "Transaction", transaction)
+```
+
+This prints 6 lines: 2 outer iterations × 3 inner iterations per outer iteration.
+
+- `range(1, 3)` produces `1, 2` (stop value excluded).
+- `range(1, 4)` produces `1, 2, 3` (stop value excluded).
+- When the outer loop advances, the inner loop starts again from the beginning.
+
+## `continue` inside a nested loop
+
+`continue` skips the rest of the current iteration of the loop containing it. If it is inside the inner loop, the outer loop can still continue normally.
+
+```python
+for number in range(1, 4):
+    for step in range(1, 3):
+        if number == 2:
+            continue
+        print(number, step)
+```
+
+Output: `1 1`, `1 2`, `3 1`, `3 2`.
+
+## `break` inside a nested loop
+
+`break` exits the loop containing it—not automatically every surrounding loop.
+
+```python
+for number in range(1, 4):
+    for step in range(1, 4):
+        if step == 2:
+            break
+        print(number, step)
+```
+
+Output: `1 1`, `2 1`, `3 1`. The inner loop breaks at step 2 on every outer iteration.
+
+**Quick rule:** If the inner loop runs fully each time, total inner-loop executions are outer iterations × inner iterations per outer iteration.
