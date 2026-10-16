@@ -2008,3 +2008,351 @@ I now have a working banking program that handles bad input without crashing.
 **We adapt. We don't stop. 🐍🔥**
 
 ---
+# 🐍 Python Journey
+
+## Day 24 — Transaction History
+
+### 🎯 Goal
+
+Give the banking program a memory of transactions made during the current session.
+
+### 📚 What I Learned
+
+* Creating an empty list to store transaction history:
+
+```python
+transactions = []
+```
+
+* Adding transactions with `.append()`:
+
+```python
+transactions.append(f"Deposit: N{amount}")
+transactions.append(f"Withdraw: N{amount}")
+```
+
+* Using a `for` loop to display every transaction:
+
+```python
+for transaction in transactions:
+    print(transaction)
+```
+
+* Lists maintain the order in which items are added.
+* A list continues to exist while the program is running, so it can remember previous transactions across multiple loop iterations.
+* Only successful transactions should be added to the transaction history.
+* Program state matters: when checking whether a withdrawal is possible, I need to be careful about whether I'm checking the old balance or the updated balance.
+
+### 🏦 Banking Program Application
+
+Successful deposit:
+
+```python
+balance = deposit(balance, amount)
+transactions.append(f"Deposit: N{amount}")
+```
+
+Successful withdrawal:
+
+```python
+amount = int(input("How much do you want to withdraw? "))
+
+if balance >= amount:
+    transactions.append(f"Withdraw: N{amount}")
+
+balance = withdrawal(balance, amount)
+```
+
+Mini statement:
+
+```python
+for transaction in transactions:
+    print(transaction)
+```
+
+### 🧠 Important Lesson
+
+A failed transaction should **not** be recorded.
+
+For example, if the balance is N45,000 and the user attempts to withdraw N50,000:
+
+```text
+Insufficient Funds.
+```
+
+The transaction history should not contain:
+
+```text
+Withdraw: N50000
+```
+
+### 🏆 Day 24 Score
+
+**~97%**
+
+### 💡 Day 24 Takeaway
+
+I learned how to make my program remember what happened during the session. This was an important step from writing individual Python exercises toward building programs with actual state and behavior.
+
+---
+
+# Day 25 — Formatting & Mini Statements
+
+### 🎯 Goal
+
+Make the transaction history easier to read and strengthen my understanding of `for` loops and string repetition.
+
+### 📚 What I Learned
+
+#### 1. Iterating Through a List
+
+```python
+transactions = []
+
+transactions.append("Deposit: N10000")
+transactions.append("Withdraw: N5000")
+transactions.append("Deposit: N3000")
+
+for transaction in transactions:
+    print(transaction)
+```
+
+The loop runs once for every item in the list.
+
+If there are 3 items, the loop executes 3 times.
+
+Important:
+Python list indexes start at `0`, but the **length** of a list is the actual number of items.
+
+A list containing 3 items has:
+
+```text
+Indexes: 0, 1, 2
+Length: 3
+```
+
+#### 2. String Repetition
+
+```python
+print("=" * 40)
+```
+
+This prints 40 `=` characters.
+
+It can be used to create clean separators without manually typing the character repeatedly.
+
+Examples:
+
+```python
+"=" * 10
+"-" * 5
+```
+
+#### 3. Formatting the Mini Statement
+
+```python
+print("=" * 40)
+print("             MINI STATEMENT")
+print("=" * 40)
+
+print("Transaction History:")
+
+for transaction in transactions:
+    print(transaction)
+
+print("=" * 40)
+```
+
+### 🧠 Mentor Challenge
+
+If:
+
+```python
+transactions = []
+```
+
+then:
+
+```python
+for transaction in transactions:
+    print(transaction)
+```
+
+does **not** crash.
+
+The loop simply runs **zero times** because there are no items to iterate over.
+
+### 🏆 Day 25 Checkpoint
+
+* Thinking Exercise: **9/10**
+* String repetition concept: **10/10**
+* Final transaction-history challenge: **9.5/10**
+
+### 💡 Day 25 Takeaway
+
+I learned that loops depend on the items inside the collection. An empty list means the `for` loop executes zero times.
+
+I also learned how simple string repetition can make program output much cleaner and more professional.
+
+---
+
+## 🚀 Current Progress
+
+**Day 25 completed.**
+
+I can now use:
+
+* Variables
+* Input
+* Conditions
+* Functions
+* Parameters and arguments
+* Return values
+* Lists
+* Tuples
+* Dictionaries
+* Sets
+* `for` loops
+* `while` loops
+* `range()`
+* Strings and string methods
+* Modules
+* File handling
+* Exception handling
+* Function scope
+* Transaction history
+* Program state
+* Formatted output
+
+### 🏦 Banking Program Progress
+
+The banking program can now:
+
+* Check balance
+* Deposit money
+* Withdraw money
+* Reject invalid numeric input
+* Reject insufficient funds
+* Store successful transactions
+* Display transaction history
+* Display a formatted mini statement
+
+### 🧭 Next Step
+
+Continue building the banking/ATM program while introducing the next Python concept.
+
+> **We adapt. We don't stop. 🐍🔥**
+
+---
+
+# Day 26 — `break` & `continue`
+
+## 🎯 Goal
+Understand how to exit a loop immediately or skip the rest of one iteration, then apply `break` to the banking program.
+
+## 📚 What I Learned
+
+### `break` — exit the loop
+
+```python
+for number in range(1, 6):
+    print(number)
+    if number == 3:
+        break
+```
+
+Output:
+
+```text
+1
+2
+3
+```
+
+When Python reaches `break`, it immediately exits the loop. The remaining iterations do not run.
+
+### `continue` — skip the current iteration's remaining code
+
+```python
+for number in range(1, 6):
+    if number == 3:
+        continue
+    print(number)
+```
+
+Output:
+
+```text
+1
+2
+4
+5
+```
+
+When `number` is `3`, `continue` skips `print(number)` and moves to the next iteration. It does not end the entire loop.
+
+### Combining `continue` and `break`
+
+```python
+for number in range(1, 8):
+    if number == 3:
+        continue
+    if number == 6:
+        break
+    print(number)
+```
+
+Output:
+
+```text
+1
+2
+4
+5
+```
+
+`3` is skipped, `6` triggers `break` before it can be printed, and `7` is never reached.
+
+## 🏦 Banking Program Application
+
+The banking program now uses `while True` and `break` to exit:
+
+```python
+while True:
+    show_menu()
+    # get and process the user's choice
+    if choice == 5:
+        print("Goodbye!")
+        break
+```
+
+This replaces the need for a `running = True` flag and setting `running = False` to exit.
+
+### When `continue` is unnecessary
+
+```python
+for transaction in transactions:
+    print(transaction)
+    continue
+```
+
+The `continue` here is redundant because there is no other statement after it in the loop body. Removing it still prints every transaction in order.
+
+## 🏆 Day 26 Review
+
+**Concept and reasoning checks: 10/10**
+
+I correctly applied `break` to the banking program and learned to predict the effects of `break` and `continue` in the same loop.
+
+## 💡 Key Difference
+
+- `break` immediately exits the entire loop.
+- `continue` skips the rest of the current iteration and moves to the next iteration.
+
+---
+
+## 🚀 Next Step
+
+**Day 27 — Nested Loops.** Learn how one loop can run inside another, practise tracing the execution order, and explore a practical use case.
+
+**We adapt. We don't stop. 🐍🔥**
