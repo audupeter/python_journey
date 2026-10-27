@@ -2454,4 +2454,65 @@ This represents two accounts with three transactions each and prints six lines. 
 
 > For every iteration of the outer loop, the inner loop runs through its own iterations. In nested loops, `break` and `continue` affect the loop where they are written.
 
-**Current Streak:** 🔥 Day 27 / 365
+---
+
+# Day 28 — List Comprehensions
+
+## List comprehension
+
+A concise way to create a new list by applying an expression to each item in an iterable.
+
+```python
+squares = [number ** 2 for number in numbers]
+```
+
+General pattern:
+
+```python
+new_list = [expression for item in iterable]
+```
+
+The expression is evaluated for each item, and the results are collected into a new list. This often replaces creating an empty list and using `.append()` inside a `for` loop.
+
+## Filtering in a list comprehension
+
+Add an `if` condition after the `for` clause to include only items that satisfy the condition.
+
+```python
+expensive_prices = [price for price in prices if price > 200]
+```
+
+The condition filters the original items; the expression determines what is placed in the result list.
+
+## Filtering and transforming together
+
+```python
+premium_discounted_prices = [price - (10 / 100 * price) for price in prices if price > 200]
+```
+
+This includes only original prices above 200, then calculates the 10% discount for each included price.
+
+**Mental model:**
+
+1. Take each item from the iterable.
+2. Check the condition, if one is present.
+3. If it qualifies, evaluate the expression.
+4. Put the result into the new list.
+
+## `sum()`
+
+`sum(iterable)` returns the total of numeric items in an iterable.
+
+```python
+total_discounted_value = sum(discounted_prices)
+```
+
+This stores the total as a number. Writing `[sum(discounted_prices)]` instead creates a list with the total as its only item.
+
+## Day 28 Key Lesson
+
+> In `[expression for item in iterable if condition]`, the `if` filters items and the expression transforms the items that qualify.
+
+---
+
+**Current Streak:** 🔥 Day 28 / 365

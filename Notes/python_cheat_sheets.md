@@ -1071,3 +1071,63 @@ for number in range(1, 4):
 Output: `1 1`, `2 1`, `3 1`. The inner loop breaks at step 2 on every outer iteration.
 
 **Quick rule:** If the inner loop runs fully each time, total inner-loop executions are outer iterations × inner iterations per outer iteration.
+
+---
+
+# Day 28 — List Comprehensions
+
+## Transform every item
+
+```python
+numbers = [2, 4, 6]
+doubled = [number * 2 for number in numbers]
+# [4, 8, 12]
+```
+
+**Pattern:**
+
+```python
+new_list = [expression for item in iterable]
+```
+
+## Filter items with `if`
+
+```python
+prices = [100, 200, 250, 300, 500]
+expensive_prices = [price for price in prices if price > 200]
+# [250, 300, 500]
+```
+
+## Filter and transform together
+
+```python
+premium_discounted_prices = [price - (10 / 100 * price) for price in prices if price > 200]
+```
+
+- `if price > 200` filters based on the original price.
+- `price - (10 / 100 * price)` calculates the 10% discounted value placed in the new list.
+
+**Pattern:**
+
+```python
+new_list = [expression for item in iterable if condition]
+```
+
+## Calculate a total with `sum()`
+
+```python
+discounted_prices = [price - (10 / 100 * price) for price in prices]
+total_discounted_value = sum(discounted_prices)
+```
+
+Use `sum(discounted_prices)` for a numeric total. Do not wrap it in square brackets unless you specifically want a list containing that total.
+
+## Final challenge example
+
+```python
+numbers = [3, 8, 12, 5, 20, 7]
+large_squares = [number ** 2 for number in numbers if number > 10]
+# [144, 400]
+```
+
+**Quick reminder:** the `if` decides which items qualify; the expression decides what goes into the result list.

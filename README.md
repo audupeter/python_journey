@@ -2438,3 +2438,93 @@ Nested loops can represent multiple transactions for each account, or multiple t
 - Calculated total iterations by multiplying outer iterations by inner iterations when the inner loop runs fully each time.
 
 **We adapt. We don't stop. 🐍🔥**
+
+---
+
+# Day 28 — List Comprehensions
+
+## 🎯 Goal
+Create new lists by transforming items, filtering items, or doing both in one concise expression.
+
+## 📚 What I Learned
+
+### 1. Transform a list
+
+A list comprehension follows this pattern:
+
+```python
+new_list = [expression for item in iterable]
+```
+
+Example: double each number.
+
+```python
+numbers = [2, 4, 6]
+doubled = [number * 2 for number in numbers]
+print(doubled)  # [4, 8, 12]
+```
+
+The expression is evaluated for each item, and the results form a new list. I do not need to create an empty list and call `.append()` manually.
+
+### 2. Filter a list
+
+Add an `if` condition after the `for` part to keep only items that qualify.
+
+```python
+prices = [100, 200, 250, 300, 500, 600, 700, 1000]
+expensive_prices = [price for price in prices if price > 200]
+print(expensive_prices)  # [250, 300, 500, 600, 700, 1000]
+```
+
+### 3. Filter and transform together
+
+The condition decides which original items qualify; the expression decides what value is placed in the new list.
+
+```python
+prices = [120, 450, 80, 700, 250, 1000, 160]
+premium_discounted_prices = [price - (10 / 100 * price) for price in prices if price > 200]
+print(premium_discounted_prices)  # [405.0, 630.0, 225.0, 900.0]
+```
+
+This filters the **original prices** to those above 200, then calculates a 10% discount for each qualifying price.
+
+### 4. Use a built-in function with a list
+
+`sum()` adds the numeric items in an iterable.
+
+```python
+discounted_prices = [price - (10 / 100 * price) for price in prices]
+total_discounted_value = sum(discounted_prices)
+print(total_discounted_value)  # 2484.0
+```
+
+Keep the total as a number: `sum(discounted_prices)`, not `[sum(discounted_prices)]`, which would create a list containing the total.
+
+## 💻 Price Analyzer Mini-Project
+
+I practised using list comprehensions to:
+
+- Calculate a 10% discount for every price.
+- Filter prices above 200.
+- Calculate discounted values only for original prices above 200.
+- Calculate the total value of all discounted prices with `sum()`.
+
+## 🏆 Final Challenge
+
+```python
+numbers = [3, 8, 12, 5, 20, 7]
+large_squares = [number ** 2 for number in numbers if number > 10]
+print(large_squares)  # [144, 400]
+```
+
+**Score: 10/10.** Correctly combined filtering (`number > 10`) and transformation (`number ** 2`) in one list comprehension.
+
+## 🔑 Day 28 Key Lesson
+
+> `[expression for item in iterable if condition]` builds a new list from items that pass the condition, using the expression to decide what each result should be.
+
+**Status: Day 28 complete.**
+
+**We adapt. We don't stop. 🐍🔥**
+
+---
